@@ -1,5 +1,5 @@
 <?php
- require_once $_SERVER['DOCUMENT_ROOT'] . 'www.insttic.com/admin/conexion/conexion.php';
+ require_once $_SERVER['DOCUMENT_ROOT'] . '/www.insttic.com/admin/conexion/conexion.php';
 
  $sql = "select * from alumno";
  $resultado = $conexion -> query($sql);
