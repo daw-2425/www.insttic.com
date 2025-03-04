@@ -13,9 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
  
    
 </head>
@@ -25,9 +25,9 @@
 
     
     
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/insttic/Admin/secretaria/components/aside.php" ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/www.insttic.com/admin/secretaria/components/aside.php" ?>
 
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] ."/insttic/Admin/secretaria/components/asideResponsive.php" ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] ."/www.insttic.com/admin/secretaria/components/asideResponsive.php" ?>
 
     <div class="main">
         <div class="container-fluid encabezado d-flex d-lg-none ">
