@@ -33,7 +33,7 @@
         <div class="container-fluid encabezado d-flex d-lg-none ">
                  <header class="encabezado  col-12 d-flex justify-content-between">
                     <a class="btn logo">
-                        <img src="./img/logoi.png" alt="">
+                        <img src="../img/logoi.png" alt="">
                     </a>
                     <a class="btn d-flex d-lg-none text-white" data-bs-toggle="offcanvas" data-bs-target="#menuBar" aria-controls="offcanvasScrolling">
                         <i class="fa-solid fa-bars"></i>
@@ -56,7 +56,7 @@
             </div>
             <div class="perfil col-2 d-none d-lg-flex">
                 <div class="imagen">
-                    <img src="./img/perfil/perfil.jpg" alt="">
+                    <img src="../img/perfil/perfil.jpg" alt="">
                 </div>
                 <div class="nombre d-none d-lg-block">
                     <span>Admin</span>
@@ -74,11 +74,11 @@
 
 </div>
 
-<script src="./js/chart.umd.js"></script>
-<script src="./js/chartjs-plugin-datalabels.js"></script>
-<script src="./js/aside.js"></script>
-<script src="./js/all.js"></script>
-<script src="./js/grafico.js"></script>
+<script src="../js/chart.umd.js"></script>
+<script src="../js/chartjs-plugin-datalabels.js"></script>
+<script src="../js/aside.js"></script>
+<script src="../js/all.js"></script>
+<script src="../js/grafico.js"></script>
 
 
 <script src="../js/bootstrap.bundle.min.js"></script>
