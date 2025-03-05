@@ -188,3 +188,4 @@ CREATE table detalle(
     tipo_categoria VARCHAR(200) NOT NULL,
     id_noticia INT DEFAULT NULL, FOREIGN KEY(id_noticia) REFERENCES categoria_noticia(id_categoria)
 );
+
