@@ -1,6 +1,7 @@
 <?php
 // permiso.php
-include '../../conexion/conexion.php';
+// include '../../conexion/conexion.php';
+require '../../../conexion/conexion.php';
 
 // Manejo de la inserción
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tipo']) && $_POST['tipo'] === 'permiso') {
