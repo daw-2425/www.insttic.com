@@ -136,7 +136,7 @@ create table permiso(
 	fecha_entrada DATE not null,
 	fecha_salida DATE not null,
 	id_alumno int not null,
-	estado ENUM('Pendiente','Espera','Aceptado','REGRESado') not null,
+	estado ENUM('Pendiente','Aceptado','Denegado') not null,
 	archivo_adjuntado VARCHAR(50),
 	FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno)
 );
