@@ -189,3 +189,61 @@ CREATE table detalle(
     id_noticia INT DEFAULT NULL, FOREIGN KEY(id_noticia) REFERENCES categoria_noticia(id_categoria)
 );
 
+INSERT INTO rol (rol) VALUES 
+('Administrador'),
+('Profesor'),
+('Alumno');
+
+INSERT INTO empleado (foto, nombre, apellido, telefono, correo, genero, id_rol) VALUES
+('empleado1.jpg', 'Juan', 'Pérez', '555123456', 'juan.perez@instituto.com', 'Masculino', 1),
+('empleado2.jpg', 'María', 'López', '555987654', 'maria.lopez@instituto.com', 'Femenino', 2);
+
+INSERT INTO profesor (id_empleado) VALUES
+(2);  
+
+INSERT INTO especialidad (denominacion, descripcion) VALUES 
+('Informatica', 'Carrera en ciencias de la computación'),
+('Ingeniería Electrónica', 'Carrera en electrónica y telecomunicaciones');
+
+INSERT INTO generacion (nombre, año_inicio, año_fin, id_especialidad, id_sala) VALUES
+('Generación 2021-2023', 2025, 2029, 1, 1),
+('Generación 2023-2024', 2024, 2028, 2, 2);
+
+INSERT INTO alumno (foto, nombre, apellidos, fecha_nacimiento, contacto_emergencia, genero, id_rol) VALUES
+('alumno1.jpg', 'Carlos', 'Ramírez', '2000-03-01', '555112233', 'Masculino', 3),
+('alumno2.jpg', 'Ana', 'Martínez', '2001-07-12', '555998877', 'Femenino', 3);
+
+INSERT INTO materia (nombre, creditos, horas, id_profesor, id_especialidad) VALUES
+('Matemáticas Avanzadas', 5, 40, 1, 1),
+('Circuitos Eléctricos', 4, 36, 2, 2);
+
+INSERT INTO nota (id_alumno, id_materia, nota) VALUES
+(1, 1, 9.5),
+(2, 2, 8.0);
+
+INSERT INTO amonestacion (motivo, descripcion, fecha, id_empleado, id_alumno) VALUES
+('Falta de asistencia', 'El alumno no asistió a 3 clases consecutivas', '2025-03-01', 1, 1),
+('Comportamiento', 'Se detectó comportamiento inapropiado en clase', '2025-03-03', 2, 2);
+
+INSERT INTO permiso (motivo, fecha_entrada, fecha_salida, id_alumno, estado, archivo_adjuntado) VALUES
+('Enfermedad', '2025-03-01', '2025-03-03', 1, 'Pendiente', 'enfermedad.pdf'),
+('Baja temporal', '2025-03-04', '2025-03-10', 2, 'Aceptado', 'baja_temporal.pdf');
+
+INSERT INTO usuario (nombre, passwd, id_alumno, id_empleado) VALUES
+('juanperez', 'password123', 1, NULL),
+('maria_lopez', 'securepassword', NULL, 1);
+
+INSERT INTO categoria_noticia (tipo_categoria) VALUES 
+('Noticias académicas'),
+('Eventos institucionales');
+
+INSERT INTO noticias (imagen, titulo, descripcion, fecha_suceso, id_categoria) VALUES
+('noticia1.jpg', 'Convocatoria de becas', 'Se abre la convocatoria para becas en la especialidad de informática.', '2025-03-01', 1),
+('noticia2.jpg', 'Feria de empleo', 'Feria de empleo y oportunidades de prácticas profesionales.', '2025-03-05', 2);
+
+
+INSERT INTO detalle (imagen, descripcion, tipo_categoria, id_noticia) VALUES
+('detalle1.jpg', 'Detalles sobre la convocatoria de becas para los estudiantes de informática.', 'Noticias académicas', 1),
+('detalle2.jpg', 'Información sobre las empresas que participarán en la feria de empleo.', 'Eventos institucionales', 2);
+
+
