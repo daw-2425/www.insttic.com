@@ -1,12 +1,12 @@
 <?php
-session_start();
-if (!isset($_SESSION["id"])) {
-  header("Location: ../index.php");
-  exit(); // Importante agregar exit después de redirección
-} elseif ($_SESSION["rol"] != 'Alumno') {
-  header("Location: ../index.php");
-  exit(); // También necesario aquí
-}
+// session_start();
+// if (!isset($_SESSION["id"])) {
+//   header("Location: ../index.php");
+//   exit(); // Importante agregar exit después de redirección
+// } elseif ($_SESSION["rol"] != 'Alumno') {
+//   header("Location: ../index.php");
+//   exit(); // También necesario aquí
+// }
 
 
 ?>

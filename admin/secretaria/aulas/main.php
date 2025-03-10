@@ -1,15 +1,14 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+ 
  
    
 </head>
@@ -27,7 +26,7 @@
         <div class="container-fluid encabezado d-flex d-lg-none ">
                  <header class="encabezado  col-12 d-flex justify-content-between">
                     <a class="btn logo">
-                        <img src="./img/logoi.png" alt="">
+                        <img src="" alt="">
                     </a>
                     <a class="btn d-flex d-lg-none text-white" data-bs-toggle="offcanvas" data-bs-target="#menuBar" aria-controls="offcanvasScrolling">
                         <i class="fa-solid fa-bars"></i>
@@ -68,11 +67,10 @@
 
 </div>
 
-<script src="./js/chart.umd.js"></script>
-<script src="./js/chartjs-plugin-datalabels.js"></script>
-<script src="./js/aside.js"></script>
-<script src="./js/all.js"></script>
-<script src="./js/grafico.js"></script>
+<script src="../js/chart.umd.js"></script>
+<script src="../js/chartjs-plugin-datalabels.js"></script>
+<script src="../js/aside.js"></script>
+<script src="../js/all.js"></script>
 
 
 <script src="../js/bootstrap.bundle.min.js"></script>
