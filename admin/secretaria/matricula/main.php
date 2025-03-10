@@ -478,6 +478,18 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorEspecialidad') {
     </div>
 </div>
 
+<div class="mb-4">
+        <h4> Alumnos Por Generaciones:</h4>
+        <div class="btn-group" role="group" aria-label="Filtro de generaciones" id="filtroGeneraciones">
+            <button type="button" class="btn btn-primary" onclick="filtrarPorGeneracion('todas')">Todas</button>
+            <?php foreach($generaciones as $generacion): ?>
+                <button type="button" class="btn btn-outline-primary" onclick="filtrarPorGeneracion('<?php echo $generacion['id_generacion']; ?>')">
+                    <?php echo $generacion['nombre']; ?>
+                </button>
+            <?php endforeach; ?>
+        </div>
+    </div>
+
 
 
 
@@ -798,6 +810,23 @@ document.addEventListener('DOMContentLoaded', function() {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
+
+function filtrarPorGeneracion(idGeneracion) {
+    const alumnos = document.querySelectorAll('tbody tr');
+
+    // Filtrar alumnos por generación
+    alumnos.forEach(alumno => {
+        const especialidadAlumno = alumno.getAttribute('data-especialidad');
+        const generacionAlumno = alumno.getAttribute('data-generacion');
+
+        if ((idGeneracion === 'todas' || generacionAlumno === idGeneracion) && 
+            (especialidadAlumno === document.querySelector('.btn-primary[data-especialidad]').getAttribute('data-especialidad'))) {
+            alumno.style.display = 'table-row'; // Mostrar el alumno
+        } else {
+            alumno.style.display = 'none'; // Ocultar el alumno
+        }
+    });
+}
 </script>
 </body>
 </html>
