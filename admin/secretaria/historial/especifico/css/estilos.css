@@ -42,8 +42,11 @@
   height: 40vh;
 }
 #tablap table thead {
+  
   position: sticky;
   top: 0;
+  font-size: small;
+  
 }
 #tablap table tbody tr td {
   font-size: medium;
@@ -52,10 +55,13 @@
   background-color: var(--primary);
   position: sticky;
   color: white;
-  top: 0;
+
   font-size: small;
+  top: 0;
+
 }
 #estu {
+  background-color: #00ff00;
   margin-top: 15px;
   height: 40px;
 }
