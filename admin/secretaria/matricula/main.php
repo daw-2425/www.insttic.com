@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                           fecha_nacimiento = :fecha_nacimiento, 
                           contacto_emergencia = :contacto_emergencia, 
                           genero = :genero, 
-                          id_rol = :id_rol 
+                          id_rol = :id_rol
                           WHERE id_alumno = :id_alumno";
             
             $stmtAlumno = $conexion->prepare($sqlAlumno);
