@@ -1,0 +1,287 @@
+[
+  {
+    "historial": [
+      {
+        "perfil": "../img/img/OIP.jpg",
+        "nombre": "Acacio Mañe",
+        "Apellidos": "Edu Nfumusogo",
+        "contacto": "222830198",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "0003974331",
+        "anios": "25"
+      },
+
+      {
+        "perfil": "../img/img/th (15).jpg",
+        "nombre": "Anastasia",
+        "Apellidos": "Trinidad Maye",
+        "contacto": "222874327",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "000249323",
+        "anios": "20"
+      },
+
+      {
+        "perfil": "../img/img/th (16).jpg",
+        "nombre": "Casandra",
+        "Apellidos": "Mercedes Ayi",
+        "contacto": "222129832",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2024/2025",
+        "año1": "2024",
+        "año2": "2025",
+        "dip": "000876643",
+        "anios": "22"
+      },
+
+      
+
+      {
+        "perfil": "../img/img/th (16).jpg",
+        "nombre": "Casandra",
+        "Apellidos": "Mercedes Ayi",
+        "contacto": "222129832",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2024/2025",
+        "año1": "2024",
+        "año2": "2025",
+        "dip": "000876643",
+        "anios": "22"
+      }
+,
+      {
+        "perfil": "../img/img/th (17).jpg",
+        "nombre": "Pedro",
+        "Apellidos": "Nolasco Micha",
+        "contacto": "222874327",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2024/2025",
+        "año1": "2024",
+        "año2": "2025",
+        "dip": "000249323",
+        "anios": "25"
+      },
+
+      {
+        "perfil": "../img/img/th (19).jpg",
+        "nombre": "M⁰ Dolores",
+        "Apellidos": "Mangue",
+        "contacto": "222874327",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2022/2023",
+        "año1": "2022",
+        "año2": "2023",
+        "dip": "000249323",
+        "anios": "29"
+      },
+
+      {
+        "perfil": "../img/img/th (20).jpg",
+        "nombre": "Tarsicio",
+        "Apellidos": "Santander",
+        "contacto": "222210947",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2022/2023",
+        "año1": "2022",
+        "año2": "2023",
+        "dip": "0001290345",
+        "anios": "21"
+      },
+
+      {
+        "perfil": "../img/img/th (21).jpg",
+        "nombre": "Yolanda",
+        "Apellidos": "Nchama",
+        "contacto": "222874327",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "000249323",
+        "anios": "19"
+      },
+
+      {
+        "perfil": "../img/img/th (25).jpg",
+        "nombre": "M⁰ Cristina",
+        "Apellidos": "SENE",
+        "contacto": "555893201",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2021/2022",
+        "año1": "2021",
+        "año2": "2022",
+        "dip": "0003782910",
+        "anios": "23"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Zabulon",
+        "Apellidos": "Sima",
+        "contacto": "222833419",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2021/2022",
+        "año1": "2021",
+        "año2": "2022",
+        "dip": "0003782910",
+        "anios": "22"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Medianera",
+        "Apellidos": "Asangono",
+        "contacto": "555893201",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2021/2022",
+        "año1": "2021",
+        "año2": "2022",
+        "dip": "0003782910",
+        "anios": "23"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Geovany",
+        "Apellidos": "Merhy",
+        "contacto": "222899322",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "000128309",
+        "anios": "25"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Teresa",
+        "Apellidos": "Laura Mba",
+        "contacto": "555893201",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2020/2021",
+        "año1": "2020",
+        "año2": "2021",
+        "dip": "0002782910",
+        "anios": "19"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Antonio",
+        "Apellidos": "Ruben Ndong",
+        "contacto": "222273893",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2020/2021",
+        "año1": "2020",
+        "año2": "2021",
+        "dip": "000120934",
+        "anios": "23"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Pascual",
+        "Apellidos": "Nguema",
+        "contacto": "555893201",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2020/2021",
+        "año1": "2020",
+        "año2": "2021",
+        "dip": "0003782910",
+        "anios": "23"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Pedro",
+        "Apellidos": "Mba",
+        "contacto": "222820133",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "0009820122",
+        "anios": "20"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Marcelo",
+        "Apellidos": "Enzema",
+        "contacto": "555893201",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "0002093910",
+        "anios": "23"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Arsenio",
+        "Apellidos": "Perez",
+        "contacto": "555128649",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "0003782910",
+        "anios": "23"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Juan Maria",
+        "Apellidos": "Esono",
+        "contacto": "555893201",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "0002093910",
+        "anios": "25"
+      },
+
+      {
+        "perfil": "./img/",
+        "nombre": "Placido",
+        "Apellidos": "Pablo Ondo",
+        "contacto": "555893201",
+        "especialidad": "DAW",
+        "tutor": "Fermín Copoború Loeri",
+        "añoA": "2023/2024",
+        "año1": "2023",
+        "año2": "2024",
+        "dip": "0003329845",
+        "anios": "20"
+      }
+    ]
+  }
+]
