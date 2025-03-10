@@ -299,4 +299,83 @@ body{
 
 
 
-
+ 
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px 8px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #0A2A66;
+        color: white;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    .acciones a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: #4CAF50;
+    }
+    
+    .acciones a.eliminar {
+        color: #f44336;
+    }
+    
+    .estado-pago {
+        padding: 5px 10px;
+        border-radius: 3px;
+        color: white;
+        font-size: 0.9em;
+    }
+    
+    .pagado {
+        background-color: #4CAF50;
+    }
+    
+    .pendiente {
+        background-color: #f44336;
+    }
