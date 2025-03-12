@@ -375,6 +375,92 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorEspecialidad') {
     echo $html;
     exit;
 }
+
+
+if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorGeneracion') {
+    $id_generacion = isset($_GET['id_generacion']) ? $_GET['id_generacion'] : '';
+    
+    // Query para filtrar por generación
+    if (!empty($id_generacion) && $id_generacion != 'todas') {
+        $query_alumnos = "SELECT a.id_alumno, a.foto, a.nombre, a.apellidos, a.fecha_nacimiento, a.contacto_emergencia, 
+                          a.genero, r.rol, m.fecha_matricula, m.total_matricula, m.total_pagada, m.matricula_restante,
+                          e.denominacion as especialidad, g.nombre as generacion
+                          FROM alumno a
+                          LEFT JOIN rol r ON a.id_rol = r.id_rol
+                          LEFT JOIN matricula m ON a.id_alumno = m.id_alumno
+                          LEFT JOIN especialidad e ON m.id_especialidad = e.id_especialidad
+                          LEFT JOIN generacion g ON m.id_generacion = g.id_generacion
+                          WHERE m.id_generacion = :id_generacion
+                          ORDER BY a.id_alumno DESC";
+        
+        $stmt_alumnos = $conexion->prepare($query_alumnos);
+        $stmt_alumnos->bindParam(':id_generacion', $id_generacion);
+    } else {
+        // Mostrar todos los alumnos
+        $query_alumnos = "SELECT a.id_alumno, a.foto, a.nombre, a.apellidos, a.fecha_nacimiento, a.contacto_emergencia, 
+                          a.genero, r.rol, m.fecha_matricula, m.total_matricula, m.total_pagada, m.matricula_restante,
+                          e.denominacion as especialidad, g.nombre as generacion
+                          FROM alumno a
+                          LEFT JOIN rol r ON a.id_rol = r.id_rol
+                          LEFT JOIN matricula m ON a.id_alumno = m.id_alumno
+                          LEFT JOIN especialidad e ON m.id_especialidad = e.id_especialidad
+                          LEFT JOIN generacion g ON m.id_generacion = g.id_generacion
+                          ORDER BY a.id_alumno DESC";
+        
+        $stmt_alumnos = $conexion->prepare($query_alumnos);
+    }
+    
+    $stmt_alumnos->execute();
+    $alumnos = $stmt_alumnos->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Construir tabla HTML
+    $html = '';
+    if (!empty($alumnos)) {
+        foreach ($alumnos as $alumno) {
+            $html .= '<tr>';
+            $html .= '<td>' . $alumno['id_alumno'] . '</td>';
+            $html .= '<td><img src="fotos/' . $alumno['foto'] . '" class="foto-thumbnail rounded-circle" alt="Foto de ' . $alumno['nombre'] . '" style="width: 50px; height: 50px; object-fit: cover;"></td>';
+            $html .= '<td>' . $alumno['nombre'] . '</td>';
+            $html .= '<td>' . $alumno['apellidos'] . '</td>';
+            $html .= '<td>' . date('d/m/Y', strtotime($alumno['fecha_nacimiento'])) . '</td>';
+            $html .= '<td>' . $alumno['contacto_emergencia'] . '</td>';
+            $html .= '<td>' . $alumno['genero'] . '</td>';
+            $html .= '<td>' . $alumno['rol'] . '</td>';
+            $html .= '<td>' . ($alumno['especialidad'] ?? 'No asignada') . '</td>';
+            $html .= '<td>' . ($alumno['generacion'] ?? 'No asignada') . '</td>';
+            
+            // Información de matrícula
+            $html .= '<td>';
+            if (isset($alumno['total_matricula'])) {
+                $html .= '<span data-bs-toggle="tooltip" data-bs-placement="top" title="Total: ' . $alumno['total_matricula'] . ' - Pagado: ' . $alumno['total_pagada'] . ' - Restante: ' . $alumno['matricula_restante'] . '">';
+                $html .= $alumno['fecha_matricula'] ? date('d/m/Y', strtotime($alumno['fecha_matricula'])) : 'Sin matrícula';
+                $html .= '</span>';
+            } else {
+                $html .= 'Sin matrícula';
+            }
+            $html .= '</td>';
+            
+            // Botones de acción
+            $html .= '<td>';
+            $html .= '<div class="btn-group" role="group">';
+            $html .= '<a href="?editar=' . $alumno['id_alumno'] . '" class="btn btn-warning btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">';
+            $html .= '<i class="fas fa-edit"></i>';
+            $html .= '</a>';
+            $html .= '<button class="btn btn-danger btn-sm" onclick="confirmarEliminar(' . $alumno['id_alumno'] . ')" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">';
+            $html .= '<i class="fas fa-trash"></i>';
+            $html .= '</button>';
+            $html .= '</div>';
+            $html .= '</td>';
+            $html .= '</tr>';
+        }
+    } else {
+        $html .= '<tr><td colspan="12" class="text-center">No hay registros disponibles</td></tr>';
+    }
+    
+    // Devolvemos sólo el HTML
+    echo $html;
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -444,7 +530,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorEspecialidad') {
         <div class="container">
 
      <div class="container mt-4">
-        <h1 class="text-center mb-4">Gestión de Alumnos y Matrículas</h1>
+       
         
        
         
@@ -478,19 +564,21 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorEspecialidad') {
     </div>
 </div>
 
-<div class="mb-4">
-        <h4> Alumnos Por Generaciones:</h4>
-        <div class="btn-group" role="group" aria-label="Filtro de generaciones" id="filtroGeneraciones">
-            <button type="button" class="btn btn-primary" onclick="filtrarPorGeneracion('todas')">Todas</button>
-            <?php foreach($generaciones as $generacion): ?>
-                <button type="button" class="btn btn-outline-primary" onclick="filtrarPorGeneracion('<?php echo $generacion['id_generacion']; ?>')">
-                    <?php echo $generacion['nombre']; ?>
-                </button>
-            <?php endforeach; ?>
-        </div>
+
+
+<div class="container mt-4 mb-4">
+    <h4>Alumnos por generación:</h4>
+    <div class="btn-group" role="group" aria-label="Filtro de generaciones">
+        <button type="button" class="btn btn-primary" onclick="filtrarPorGeneracion('todas')">
+            Todas
+        </button>
+        <?php foreach($generaciones as $generacion): ?>
+            <button type="button" class="btn btn-outline-primary" onclick="filtrarPorGeneracion('<?php echo $generacion['id_generacion']; ?>')">
+                <?php echo $generacion['nombre']; ?>
+            </button>
+        <?php endforeach; ?>
     </div>
-
-
+</div>
 
 
     <!-- Button trigger modal -->
@@ -648,8 +736,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorEspecialidad') {
 
 
 
-    <div class="table-responsive">
-        <table class="table table-bordered table-striped table-hover">
+    <div class="table-responsive " style="max-height: 400px; overflow-y: auto;">
+        <table class="table table-bordered table-striped table-hover max-height: 400px; overflow-y: auto;">
             <thead class="table-primary">
                 <tr>
                     <th>ID</th>
@@ -811,22 +899,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 function filtrarPorGeneracion(idGeneracion) {
-    const alumnos = document.querySelectorAll('tbody tr');
-
-    // Filtrar alumnos por generación
-    alumnos.forEach(alumno => {
-        const especialidadAlumno = alumno.getAttribute('data-especialidad');
-        const generacionAlumno = alumno.getAttribute('data-generacion');
-
-        if ((idGeneracion === 'todas' || generacionAlumno === idGeneracion) && 
-            (especialidadAlumno === document.querySelector('.btn-primary[data-especialidad]').getAttribute('data-especialidad'))) {
-            alumno.style.display = 'table-row'; // Mostrar el alumno
-        } else {
-            alumno.style.display = 'none'; // Ocultar el alumno
-        }
+    const botones = document.querySelectorAll('.btn-group[aria-label="Filtro de generaciones"] button');
+    botones.forEach(boton => {
+        boton.classList.remove('btn-primary');
+        boton.classList.add('btn-outline-primary');
     });
+    
+    // Resaltar el botón activo
+    event.target.classList.remove('btn-outline-primary');
+    event.target.classList.add('btn-primary');
+    
+    // Iniciar la petición AJAX
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `?ajax=filtrarPorGeneracion&id_generacion=${idGeneracion}`, true);
+    
+    // Mostrar un indicador de carga
+    const tbody = document.querySelector('tbody');
+    tbody.innerHTML = '<tr><td colspan="12" class="text-center"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Cargando...</span></div></td></tr>';
+    
+    xhr.onload = function() {
+        if (this.status === 200) {
+            // Actualizar el contenido de la tabla
+            tbody.innerHTML = this.responseText;
+            
+            // Reiniciar los tooltips
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        } else {
+            tbody.innerHTML = '<tr><td colspan="12" class="text-center text-danger">Error al cargar los datos</td></tr>';
+        }
+    };
+    
+    xhr.onerror = function() {
+        tbody.innerHTML = '<tr><td colspan="12" class="text-center text-danger">Error de conexión</td></tr>';
+    };
+    
+    xhr.send();
 }
+
+
+
 </script>
 </body>
 </html>
