@@ -733,7 +733,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorGeneracion') {
 
 
 
-
+<button style="padding:5px;background-color: blue; justify-content: center;margin-left: 900px;border-radius: 10px; border:none;">
+    <a  style=" color: white; text-decoration: none; font-family: cambria; font-size: 15px;font-weight: bold;" href="./reporteTodos.php">Imprimir PDF</a>
+</button>
 
 
     <div class="table-responsive " style="max-height: 400px; overflow-y: auto;">

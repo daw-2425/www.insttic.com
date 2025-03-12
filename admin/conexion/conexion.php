@@ -1,7 +1,7 @@
 <?php 
 $servidor = "localhost";
 $usuario = "root";
-$passwd = "608347rAm";
+$passwd = "";
 $BaseDatos = "insttic";
 
 $dsn = "mysql:host=$servidor;dbname=$BaseDatos";
@@ -12,6 +12,4 @@ $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // if($conexion){
 //     echo "conexion exitosa";
 // }
-
-
 ?>
