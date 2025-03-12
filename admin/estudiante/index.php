@@ -86,7 +86,7 @@ if (!isset($_SESSION["id_alumno"])) {
                         <table class="table table-hover ">
                             <thead class="encabezado_tabla">
                                 <tr class="text-center">
-                                    <th>Perfil</th>
+                                    
                                     <th>Nombre</th>
                                     <th>Apellidos</th>
                                     <th>Materia</th>
@@ -96,14 +96,14 @@ if (!isset($_SESSION["id_alumno"])) {
                             </thead>
                             <tbody id="materias">
                                 
-                                <tr class="text-center">
+                                <!-- <tr class="text-center">
                                     <td>Foto</td>
                                     <td>Fermin</td>
                                     <td>Copoboru Loeri</td>
                                     <td>DAWES</td>
 
 
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
 

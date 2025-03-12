@@ -19,10 +19,9 @@ xhr.addEventListener('load', ()=>{
     for(let materia of materias){
         tabla.innerHTML += `
         <tr class='text-center'>
-            <td>Foto</td>
-            <td>${materia.materia}</td>
             <td>${materia.nombre}</td>
             <td>${materia.apellido}</td>
+            <td>${materia.materia}</td>
         </tr>
         `;
     }

@@ -1,0 +1,25 @@
+
+#errorFoto{
+    display: none;
+}
+#errorNombre{
+    display: none;
+}
+#errorApellido{
+    display: none;
+}
+#errorTelefono{
+    display: none;
+}
+#errorCorreo{
+    display: none;
+}
+#errorGenero{
+    display: none;
+}
+
+#errorRol{
+    display: none;
+}
+
+@import url("./sweetalert2.css");

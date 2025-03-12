@@ -9,7 +9,7 @@ $id_alumno = isset($_POST['id_alumno']) ? $_POST['id_alumno'] : '';
 
 // Obtener roles para el select
 function obtenerRoles($conexion) {
-    $stmt = $conexion->prepare("SELECT id_rol, rol FROM rol");
+    $stmt = $conexion->prepare("SELECT id_rol, rol FROM rol WHERE rol = 'Alumno'");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }

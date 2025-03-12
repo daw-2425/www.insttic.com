@@ -44,7 +44,7 @@ Formulario_permiso.addEventListener("submit", (e) => {
     xhr.onload = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
 
-            console.log(xhr.response);
+            // console.log(xhr.response);
             Cargar();
             Formulario_permiso.reset();
 
@@ -61,26 +61,26 @@ function Cargar() {
     xhr.open('GET', './php/mostrar.php', true, xhr.responseType = 'json');
 
 
-    xhr.onreadystatechange = function () {
+    xhr.onload = function () {
         let datosUsuario = xhr.response;
         let mitab = document.getElementById("tabla");
-        console.log(datosUsuario);
+        // console.log(datosUsuario);
         mitab.innerHTML = '';
     //    console.log(dato);
         for (let dato of datosUsuario) {
             mitab.innerHTML += `
                 <tr>
                     <td>${dato.motivo}</td>
-                    <td>${dato.salida}</td>
-                    <td>${dato.entrada}</td>
-                    <td>${dato.arch_adjuntado}</td>
+                    <td>${dato.fecha_salida}</td>
+                    <td>${dato.fecha_entrada}</td>
+                    <td>${dato.archivo_adjuntado}</td>
                     <td>${dato.estado}</td>
                 </tr>
             `
         }
         let Usuario = xhr.response;
         let tab = document.getElementById("caja");
-        console.log(Usuario);
+        // console.log(Usuario);
         tab.innerHTML = '';
         for (let datos of Usuario) {
             tab.innerHTML += `
@@ -93,9 +93,9 @@ function Cargar() {
                 <div class="cuer"><label for="">Nombre: </label>${datos.nombre}</div>
                 <!-- <div class="cuer"><label for="">Apellido: </label> Perez Yhoni</div> -->
                 <div class="cuer"><label for="">Motivo: </label>${datos.motivo}</div>
-                <div class="cuer"><label for="">Fecha Salida: </label>${datos.salida}</div>
-                <div class="cuer"><label for="">Fecha Entrada: </label>${datos.entrada}</div>
-                <div class="cuer"><label for="">Arch. Adjunt.: </label>${datos.arch_adjuntado}</div>
+                <div class="cuer"><label for="">Fecha Salida: </label>${datos.fecha_salida}</div>
+                <div class="cuer"><label for="">Fecha Entrada: </label>${datos.fecha_entrada}</div>
+                <div class="cuer"><label for="">Arch. Adjunt.: </label>${datos.archivo_adjuntado.substring(0,2)}</div>
                 <div class="cuer boton"><label for="">Estado: </label>${datos.estado}</div>
             </div>
             `

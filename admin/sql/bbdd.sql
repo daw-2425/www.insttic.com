@@ -1,4 +1,4 @@
--- Active: 1741098752550@@127.0.0.1@3306@insttic
+-- Active: 1738527463871@@127.0.0.1@3306@insttic
 drop database insttic;
 
 
@@ -140,6 +140,8 @@ create table permiso(
 	FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno)
 );
 
+select * from permiso;
+INSERT into permiso values('','todo',now(),now(),1,'pendiente','nada');
 -- SALIDAS
 
 CREATE Table salidas(
