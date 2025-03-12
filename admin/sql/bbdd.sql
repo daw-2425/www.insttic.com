@@ -1,4 +1,5 @@
--- Active: 1741098752550@@127.0.0.1@3306@insttic
+-- Active: 1729109094940@@127.0.0.1@3306@insttic
+
 drop database insttic;
 
 
@@ -188,6 +189,7 @@ CREATE table detalle(
     id_noticia INT DEFAULT NULL, FOREIGN KEY(id_noticia) REFERENCES categoria_noticia(id_categoria)
 );
 
+<<<<<<< HEAD
 INSERT INTO rol (rol) VALUES 
 ('Administrador'),
 ('Profesor'),
@@ -241,14 +243,8 @@ INSERT INTO categoria_noticia (tipo_categoria) VALUES
 INSERT INTO noticias (imagen, titulo, descripcion, fecha_suceso, id_categoria) VALUES
 ('noticia1.jpg', 'Convocatoria de becas', 'Se abre la convocatoria para becas en la especialidad de informática.', '2025-03-01', 1),
 ('noticia2.jpg', 'Feria de empleo', 'Feria de empleo y oportunidades de prácticas profesionales.', '2025-03-05', 2);
+=======
+>>>>>>> 68903fa4f7ca9fa5410e420a91eb923d2a6f92b0
 
-
-INSERT INTO detalle (imagen, descripcion, tipo_categoria, id_noticia) VALUES
-('detalle1.jpg', 'Detalles sobre la convocatoria de becas para los estudiantes de informática.', 'Noticias académicas', 1),
-('detalle2.jpg', 'Información sobre las empresas que participarán en la feria de empleo.', 'Eventos institucionales', 2);
-
-INSERT INTO sala (numero, capacidad, planta) VALUES 
-(101, 30, 'Planta Baja'),
-(202, 25, 'Primer Piso');
 
 
