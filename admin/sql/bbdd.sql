@@ -66,6 +66,7 @@ create table alumno(
     foto VARCHAR(45) NOT NULL,
     nombre VARCHAR(45)NOT NULL,
     apellidos VARCHAR(45) NOT NULL,
+    codigo VARCHAR(45) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
     contacto_emergencia VARCHAR(45) NOT NULL,
     genero VARCHAR(45) NOT NULL,
@@ -89,7 +90,6 @@ create table matricula(
     FOREIGN KEY (id_alumno)   REFERENCES alumno(id_alumno),
 	FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad),
     FOREIGN KEY (id_generacion) REFERENCES generacion(id_generacion)
-    
 );
 
 -- MATERIA
@@ -103,7 +103,6 @@ create table materia(
     id_especialidad int,
     FOREIGN KEY (id_profesor) REFERENCES profesor(id_profesor),
 	FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad)
-
 );
 
 -- NOTA
@@ -203,15 +202,17 @@ INSERT INTO profesor (id_empleado) VALUES
 
 INSERT INTO especialidad (denominacion, descripcion) VALUES 
 ('TSDAW', 'Desarrollo de Aplicaciones Web'),
-('TSTELECO', ' telecomunicaciones');
+('TSTELECO', ' telecomunicaciones'),
+('ADMIN', 'administracion'),
+('MICINFO', ' micro infrmatica');
 
 INSERT INTO generacion (nombre, año_inicio, año_fin, id_especialidad, id_sala) VALUES
 ('Generación 2021-2023', 2025, 2029, 1, 1),
 ('Generación 2023-2024', 2024, 2028, 2, 2);
 
-INSERT INTO alumno (foto, nombre, apellidos, fecha_nacimiento, contacto_emergencia, genero, id_rol) VALUES
-('alumno1.jpg', 'Carlos', 'Ramírez', '2000-03-01', '555112233', 'Masculino', 3),
-('alumno2.jpg', 'Ana', 'Martínez', '2001-07-12', '555998877', 'Femenino', 3);
+INSERT INTO alumno (foto, nombre, apellidos,, codigo, fecha_nacimiento, contacto_emergencia, genero, id_rol) VALUES
+('alumno1.jpg', 'Carlos', 'Ramírez','123-BA' '2000-03-01', '555112233', 'Masculino', 3),
+('alumno2.jpg', 'Ana', 'Martínez', '321-AB', '2001-07-12', '555998877', 'Femenino', 3);
 
 INSERT INTO materia (id_materia,nombre, creditos, horas, id_profesor, id_especialidad) VALUES
 ('DAWES', 5, 40, 1, 1),

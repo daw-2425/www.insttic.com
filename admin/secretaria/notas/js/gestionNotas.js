@@ -1,5 +1,5 @@
 //MODALES DE INGRESION DE NOTAS
-var mdalNotasDaw = new bootstrap.Modal(document.getElementById('modalNotasDaw'));
+
 var mdalNotasAsir = new bootstrap.Modal(document.getElementById('modalNotasAsir'));
 var mdalNotasTlc = new bootstrap.Modal(document.getElementById('modalNotasTlc'));
 var mdalNotasMic = new bootstrap.Modal(document.getElementById('modalNotasMic'));
@@ -91,126 +91,9 @@ mic.addEventListener('click', () => {
     document.getElementById("daw").classList.add("ocultar");
 });
 
-// //modales para actualizar nota o corregir
-var modalActualizar = new bootstrap.Modal(document.getElementById('modalNotasActualizarDaw'));
-// //boton de actualizar o corregir
-// var btnActualizar = document.getElementById('actualizar-notaDaw');
-// //funcionalidad para la interraccion de los botones y el modal actualizar
-// btnActualizar.addEventListener('click', function () {
-//     modalActualizar.show();
-// });
-
 //validacion de campos///////////////////////////////////////////////////////////////////////
 var DawForm = document.querySelector('#formularioDaw');
 var inputsDaw = document.querySelectorAll('#formularioDaw input');
-
-// const exprr = {
-//     notaExprr: /^\d{7,14}$/
-// }
-
-// const insertarEn = {
-//     notaDaw1: false,
-//     notaDaw2: false,
-//     notaDaw3: false,
-//     notaDaw4: false
-// }
-
-// const resulInputs = (e) => {
-//     switch (e.target.name) {
-//         case "notaDaw1":
-
-//             let nota1 = document.getElementById('notaDaw1');
-
-//             if (nota1.value == "") {
-//                 nota1.classList.add('Error');
-//                 nota1.classList.remove('Correcto');
-//                 document.getElementById('errN__Daw1').innerHTML = "Ingresa la nota";
-//                 document.getElementById('errN__Daw1').classList.add('Error');
-//                 document.getElementById('labelValid1').classList.add('Error');
-//                 document.getElementById('labelValid1').classList.remove('Correcto');
-//             } else {
-//                 nota1.classList.remove('Error');
-//                 nota1.classList.add('Correcto');
-//                 document.getElementById('errN__Daw1').classList.remove('Error');
-//                 document.getElementById('labelValid1').classList.remove('Error');
-//                 document.getElementById('labelValid1').classList.add('Correcto');
-//             }
-
-//             break;
-//         case "notaDaw2":
-
-//             console.log('notaDaw2');
-//             let nota2 = document.getElementById('notaDaw2');
-
-//             if (nota2.value == "") {
-//                 nota2.classList.add('Error');
-//                 nota2.classList.remove('Correcto');
-//                 document.getElementById('errN__Daw2').innerHTML = "Ingresa la nota";
-//                 document.getElementById('errN__Daw2').classList.add('Error');
-//                 document.getElementById('labelValid2').classList.add('Error');
-//                 document.getElementById('labelValid2').classList.remove('Correcto');
-//             } else {
-//                 nota2.classList.remove('Error');
-//                 nota2.classList.add('Correcto');
-//                 document.getElementById('errN__Daw2').classList.remove('Error');
-//                 document.getElementById('labelValid2').classList.remove('Error');
-//                 document.getElementById('labelValid2').classList.add('Correcto');
-//             }
-
-//             break;
-//         case "notaDaw3":
-//             console.log('notaDaw3');
-
-//             let nota3 = document.getElementById('notaDaw3');
-
-//             if (nota3.value == "") {
-//                 nota3.classList.add('Error');
-//                 nota3.classList.remove('Correcto');
-//                 document.getElementById('errN__Daw3').innerHTML = "Ingresa la nota";
-//                 document.getElementById('errN__Daw3').classList.add('Error');
-//                 document.getElementById('labelValid3').classList.add('Error');
-//                 document.getElementById('labelValid3').classList.remove('Correcto');
-//             } else {
-//                 nota3.classList.remove('Error');
-//                 nota3.classList.add('Correcto');
-//                 document.getElementById('errN__Daw3').classList.remove('Error');
-//                 document.getElementById('labelValid3').classList.remove('Error');
-//                 document.getElementById('labelValid3').classList.add('Correcto');
-//             }
-
-//             break;
-//         case "notaDaw4":
-//             console.log('notaDaw4');
-//             let nota4 = document.getElementById('notaDaw4');
-
-//             if (nota4.value == "") {
-//                 nota4.classList.add('Error');
-//                 nota4.classList.remove('Correcto');
-//                 document.getElementById('errN__Daw4').innerHTML = "Ingresa la nota";
-//                 document.getElementById('errN__Daw4').classList.add('Error');
-//                 document.getElementById('labelValid4').classList.add('Error');
-//                 document.getElementById('labelValid4').classList.remove('Correcto');
-//             } else {
-//                 nota4.classList.remove('Error');
-//                 nota4.classList.add('Correcto');
-//                 document.getElementById('errN__Daw4').classList.remove('Error');
-//                 document.getElementById('labelValid4').classList.remove('Error');
-//                 document.getElementById('labelValid4').classList.add('Correcto');
-//             }
-
-//             break;
-
-//         default:
-//             break;
-//     }
-// }
-
-
-
-// inputsDaw.forEach((inputnota) => {
-//     inputnota.addEventListener('keyup', resulInputs);
-//     inputnota.addEventListener('blur', resulInputs);
-// });
 
 ///////////////////////////////////  MOSTRAR ESTUDIANTES //////////////////////////////////////////////////////////////////////
 
@@ -233,14 +116,14 @@ function CargarEstudiantes() {
                 tbody.innerHTML += `
             <div class="tr">
                     <div class="th">${alumno.nombre}</div>
-                    <div class="th">${alumno.apellido}</div>
+                    <div class="th">${alumno.apellidos}</div>
                     <div class="th">${alumno.codigo}</div>
                     <div class="th">
-                      <div class="btn nota" style="background-color: #0A2A66;" item="${alumno.id_alumno}" id="nota-insertarDaw"><i
+                      <div class="btn nota" style="background-color: #0A2A66;" item="${alumno.id_alumno}" data-bs-toggle="modal" data-bs-target="#insertNota" id="nota-insertarDaw"><i
                           style="color: white;" class="fa-solid fa-plus"></i></div>
                       <div class="btn ver-nota" style="background-color: green;" item="${alumno.id_alumno}" id="ver-notaDaw"><i
                           style="color: white;" class="fa-regular fa-eye"></i></div>
-                      <div class="btn ver-nota" style="background-color: #3C91E6;" item="${alumno.id_alumno}" id="actualizar-notaDaw"><i
+                      <div class="btn ver-nota" style="background-color: #3C91E6;" item="${alumno.id_alumno}" data-bs-toggle="modal" data-bs-target="#actualizartNota" id="actualizar-notaDaw"><i
                           style="color: white;" class="fa-solid fa-square-pen"></i></div>
                     </div>
                   </div>
@@ -253,10 +136,10 @@ function CargarEstudiantes() {
             let btnVerActualizarDaw = document.querySelectorAll('#actualizar-notaDaw');
 
             for (let a = 0; a < btnVerActualizarDaw.length; a++) {
-                btnVerActualizarDaw[a].addEventListener('click', ()=>{
+                btnVerActualizarDaw[a].addEventListener('click', () => {
                     let id_alumno = btnVerActualizarDaw[a].getAttribute('item');
                     console.log(id_alumno);
-                    modalActualizar.show();
+                    // modalActualizar.show();
                     notaDawActualizar(id_alumno);
                 });
             }
@@ -274,14 +157,11 @@ function CargarEstudiantes() {
             for (let i = 0; i < btnInserDaw.length; i++) {
                 btnInserDaw[i].addEventListener('click', () => {
                     let id_alumno = btnInserDaw[i].getAttribute('item');
-                    mdalNotasDaw.show();
                     notasDAW(id_alumno);
-                    // console.log(notasDAW(id_alumno));
-                    
                 });
             }
 
-            
+
 
         }
 
@@ -289,69 +169,64 @@ function CargarEstudiantes() {
     xhr.send();
 }
 
-function notasDAW(id_alumno) {
+let formDaw = document.getElementById('formularioDaw');
 
-    let ID = id_alumno;
-    let Id = document.getElementById('id_alumno').value = ID;
+formDaw.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    let asignatura = document.querySelectorAll('#materiadaw');
+    let xhr = new XMLHttpRequest();
+    let datos = new FormData(formDaw);
 
-    let formDaw = document.getElementById('formularioDaw');
 
-    formDaw.addEventListener('submit', (e) => {
-        e.preventDefault();
 
-        let xhr = new XMLHttpRequest();
-        let datos = new FormData(formDaw);
+    xhr.open('POST', './gestion/insertNota.php', true);
 
-        xhr.open('POST', './gestion/insertNota.php', true);
+    xhr.onreadystatechange = () => {
 
-        xhr.onreadystatechange = () => {
-            if (datos.get(Id) == "") {
-                swal.fire(
-                    {
-                        title: "Se ha producido un Error",
-                        icon: "Warning",
-                        draggable: true
-                    }
-                );
-            } else if (datos.get('seleccionDaw') == null && datos.get(asignatura) == "") {
-                swal.fire(
-                    {
-                        title: "Tienes Elegir Materia",
-                        icon: "Warning",
-                        draggable: true
-                    }
-                );
-                formDaw.reset();
-                mdalNotasDaw.hide();
-            } else if (datos.get('notaDaw') == "") {
-                swal.fire(
-                    {
-                        title: "Tienes que ingresar la nota",
-                        text: "Tambien asegurate de leccionar la Materia",
-                        icon: "Warning",
-                        draggable: true
-                    }
-                );
-                formDaw.reset();
-                mdalNotasDaw.hide();
-            } else {
-                swal.fire(
-                    {
-                        title: "Se ha registrado la Nota",
-                        icon: "success",
-                        draggable: true
-                    }
-                );
-                mdalNotasDaw.hide();
-                formDaw.reset();
-            }
+        let nota1 = document.getElementById('notaDaw');
+
+        if (datos.get('notaDaw') == "") {
+            swal.fire(
+                {
+                    title: "Tienes que ingresar la nota",
+                    text: "Tambien asegurate de leccionar la Materia",
+                    icon: "Warning",
+                    draggable: true
+                }
+            );
+            formDaw.reset();
+        } else if (xhr.responseText == 1) {
+            swal.fire(
+                {
+                    title: "Tienes que ingresar la nota en otra materia",
+                    text: "Ya existe una nota para en esta materia",
+                    icon: "Warning",
+                    draggable: true
+                }
+            );
+            formDaw.reset();
+        } else {
+            swal.fire(
+                {
+                    title: "Se ha registrado la Nota",
+                    icon: "success",
+                    draggable: true
+                }
+            );
+            // var mdalNotasDaw = new bootstrap.Modal(document.getElementById('modalNotasDaw'));
+            // mdalNotasDaw.hide();
+            formDaw.reset();
         }
-        xhr.send(datos);
-    });
 
+        console.log(xhr.response);
 
+    }
+    xhr.send(datos);
+});
+
+function notasDAW(id_alumno) {
+    let ID = id_alumno;
+    document.getElementById('id_alumno').value = ID
 }
 
 function MostrarDaw(id_alumno) {
@@ -383,69 +258,50 @@ function MostrarDaw(id_alumno) {
     xhr.open('POST', './gestion/vernotas.php?id_alumno=' + ID, true);
     xhr.send();
 }
+let formDawActualizacion = document.getElementById('formularioDawActualizar');
+
+formDawActualizacion.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let xhr = new XMLHttpRequest();
+    let datos = new FormData(formDawActualizacion);
+
+    xhr.open('POST', './gestion/ActualizarNotaDAW.php', true);
+
+    xhr.onreadystatechange = () => {
+        console.log(xhr.response);
+
+        if (datos.get('notaDawActualizar') == "") {
+            swal.fire(
+                {
+                    title: "Tienes que ingresar la nota",
+                    text: "Tambien asegurate de leccionar la Materia",
+                    icon: "Warning",
+                    draggable: true
+                }
+            );
+            formDawActualizacion.reset();
+        } else {
+            swal.fire(
+                {
+                    title: "Se ha registrado la Nota",
+                    icon: "success",
+                    draggable: true
+                }
+            );
+            // var modalActualizar = new bootstrap.Modal(document.getElementById('modalNotasActualizarDaw'));
+            // modalActualizar.hide();
+            formDawActualizacion.reset();
+        }
+    }
+    xhr.send(datos);
+});
 
 function notaDawActualizar(id_alumno) {
 
     let ID = id_alumno;
-    let Id = document.getElementById('id_alumno').value = ID;
-
+    document.getElementById('id_alumnoActualizar').value = ID;
     let asignatura = document.querySelectorAll('#materiadaw');
-
-    let formDawActualizacion = document.getElementById('formularioDawActualizar');
-
-    formDawActualizacion.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        let xhr = new XMLHttpRequest();
-        let datos = new FormData(formDawActualizacion);
-
-        xhr.open('POST', './gestion/ActualizarNotaDAW.php', true);
-
-        xhr.onreadystatechange = () => {
-            if (datos.get(Id) == "") {
-                swal.fire(
-                    {
-                        title: "Se ha producido un Error",
-                        icon: "Warning",
-                        draggable: true
-                    }
-                );
-            } else if (datos.get('seleccionDaw') == null && datos.get(asignatura) == "") {
-                swal.fire(
-                    {
-                        title: "Tienes Elegir Materia",
-                        icon: "Warning",
-                        draggable: true
-                    }
-                );
-                formDawActualizacion.reset();
-                modalActualizar.hide();
-            } else if (datos.get('notaDawActualizar') == "") {
-                swal.fire(
-                    {
-                        title: "Tienes que ingresar la nota",
-                        text: "Tambien asegurate de leccionar la Materia",
-                        icon: "Warning",
-                        draggable: true
-                    }
-                );
-                formDawActualizacion.reset();
-                modalActualizar.hide();
-            } else {
-                swal.fire(
-                    {
-                        title: "Se ha registrado la Nota",
-                        icon: "success",
-                        draggable: true
-                    }
-                );
-                modalActualizar.hide();
-                formDawActualizacion.reset();
-                echo ;
-            }
-        }
-        xhr.send(datos);
-    });
 
 
 }
