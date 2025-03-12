@@ -12,6 +12,4 @@ $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // if($conexion){
 //     echo "conexion exitosa";
 // }
-
-
 ?>
