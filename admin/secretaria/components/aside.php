@@ -17,7 +17,7 @@
 
             
                 <li><a href="<?php echo ruta_base;?>/main.php"> <i class="fa fa-dashboard"></i><span>Dashboard</span> </a></li>
-                <li><a href="<?= ruta_base;?>/matricula/index.php"><i class="fa-solid fa-user-graduate"></i> <span> Estudiantes</span> </a></li>
+                <li><a href="<?= ruta_base;?>/matricula/main.php"><i class="fa-solid fa-user-graduate"></i> <span> Estudiantes</span> </a></li>
                 <li><a href="<?= ruta_base;?>/historial/main.php"><i class="fa-solid fa-table"></i> <span> Historial</span> </a></li>
                 <li><a href="<?= ruta_base;?>/notas/main.php"><i class="fa-solid fa-book"></i> <span> Notas</span> </a></li>
                 <li><a href="<?= ruta_base;?>/actas/main.php"><i class="fa-solid fa-user-graduate"></i> <span> Actas</span> </a></li>
