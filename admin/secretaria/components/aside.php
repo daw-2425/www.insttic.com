@@ -1,5 +1,5 @@
 <?php 
- define("ruta_base","http://localhost/Insttic/Admin/secretaria");
+ define("ruta_base","http://localhost/www.insttic.com/Admin/secretaria");
 
 
 ?>

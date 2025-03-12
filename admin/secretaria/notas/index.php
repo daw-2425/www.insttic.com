@@ -251,7 +251,7 @@ try {
   </div>
 
   <!---MODALES DE INGRESION DE NOTAS--->
-  <div class="modal fade" id="modalNotasDaw" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="insertNota" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -550,7 +550,7 @@ try {
   </div>
 
   <!---MODALES DE INGRESION PARA ACTUALIZAR--->
-  <div class="modal fade" id="modalNotasActualizarDaw" tabindex="-1" aria-labelledby="exampleModalLabel"
+  <div class="modal fade" id="actualizartNota" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -563,7 +563,7 @@ try {
           <form action="" method="post" id="formularioDawActualizar">
             <div class="form-label">
               <label for="">Asignatura</label>
-              <select name="seleccion" id="seleccion" class="form-control">
+              <select name="MateriadawActualizar" id="seleccion" class="form-control">
                 <option value="">Click para seleccionar asignatura</option>
                 <?php foreach ($materias as $materia) { ?>
                     <option id="materiadaw" value="<?php echo $materia['id_materia'] ?>"><?php echo $materia['nombre'] ?></option>
@@ -572,11 +572,12 @@ try {
             </div>
             <div class="form-label">
               <label for="">Nota</label>
-              <input type="text" class="form-control" id="notaDawActualizar" placeholder="Click para ingresar nota">
+              <input type="text" class="form-control" id="notaDawActualizar" name="notaDawActualizar" placeholder="Click para ingresar nota">
               <div class="alert alert-warning mt-2" id="errNDaw"></div>
             </div>
             <div class="form-button">
               <button type="submit" class="btn btn-success">CAMBIAR !</button>
+              <input type="text" class="form-control" style="display: none;" name="id_alumno" id="id_alumnoActualizar">
             </div>
           </form>
         </div>
