@@ -1,12 +1,10 @@
 <?php
-// session_start();
-// if (!isset($_SESSION["id"])) {
-//   header("Location: ../index.php");
-//   exit(); // Importante agregar exit después de redirección
-// } elseif ($_SESSION["rol"] != 'Alumno') {
-//   header("Location: ../index.php");
-//   exit(); // También necesario aquí
-// }
+session_start();
+if (!isset($_SESSION["id_alumno"])) {
+  header("Location: ../index.php");
+  exit(); // Importante agregar exit después de redirección
+} 
+
 
 
 ?>
@@ -23,6 +21,7 @@
 </head>
 
 <body>
+    <input id="especialidad" type="text" class="d-none" value="<?php if (isset($_SESSION['especialidad'])) echo $_SESSION['especialidad'] ?>">
 
     <div class="general conteiner-fluid d-flex">
 
@@ -69,7 +68,7 @@
                         <p class="h4 text-center">
                             MATERIAS VISTAS  
                         </p>
-                        <p class="h5 text-center"><i class="fa-regular fa-book fa"></i> 8</p>
+                        <p class="h5 text-center"><i class="fa-regular fa-book fa"></i> <?php if (isset($_SESSION['total_materias'])) echo $_SESSION['total_materias'] ?></p>
                     </div>
                     <div class="col-12 col-lg-3 caja_dash">
                         <p class="h4 text-center">
@@ -95,47 +94,8 @@
 
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="text-center">
-                                    <td>Foto</td>
-                                    <td>Fermin</td>
-                                    <td>Copoboru Loeri</td>
-                                    <td>DAWES</td>
-
-
-                                </tr>
-                                <tr class="text-center">
-                                    <td>Foto</td>
-                                    <td>Fermin</td>
-                                    <td>Copoboru Loeri</td>
-                                    <td>DAWES</td>
-
-
-                                </tr>
-                                <tr class="text-center">
-                                    <td>Foto</td>
-                                    <td>Fermin</td>
-                                    <td>Copoboru Loeri</td>
-                                    <td>DAWES</td>
-
-
-                                </tr>
-                                <tr class="text-center">
-                                    <td>Foto</td>
-                                    <td>Fermin</td>
-                                    <td>Copoboru Loeri</td>
-                                    <td>DAWES</td>
-
-
-                                </tr>
-                                <tr class="text-center">
-                                    <td>Foto</td>
-                                    <td>Fermin</td>
-                                    <td>Copoboru Loeri</td>
-                                    <td>DAWES</td>
-
-
-                                </tr>
+                            <tbody id="materias">
+                                
                                 <tr class="text-center">
                                     <td>Foto</td>
                                     <td>Fermin</td>
@@ -186,6 +146,7 @@
             <script src="./js/chart.umd.js"></script>
             <script src="./js/chartjs-plugin-datalabels.js"></script>
             <script type="module" src="./js/graficas.js"></script>
+            <script src="./js/script.js"></script>
 
 </body>
 

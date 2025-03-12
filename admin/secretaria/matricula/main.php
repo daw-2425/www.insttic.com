@@ -524,7 +524,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorEspecialidad') {
                                     </div>
                                 <?php else: ?>
                                     <div>
-                                        <img src="placeholder.jpg" class="foto-preview" id="previewImg">
+                                        <img src="placeholder.jpg" class="foto-preview w-25 p-2" id="previewImg">
                                     </div>
                                 <?php endif; ?>
                                 <input type="file" class="form-control" id="foto" name="foto" accept="image/*" onchange="previewImage(this)">

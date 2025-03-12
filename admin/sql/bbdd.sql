@@ -1,4 +1,4 @@
--- Active: 1741098752550@@127.0.0.1@3306@insttic
+-- Active: 1738527463871@@127.0.0.1@3306@insttic
 drop database insttic;
 
 
@@ -71,7 +71,6 @@ create table alumno(
     genero VARCHAR(45) NOT NULL,
 	id_rol INT(45) NOT NULL,
     FOREIGN KEY (id_rol) REFERENCES rol(id_rol)
-   
 );
 
 -- MATRICULA
@@ -89,7 +88,6 @@ create table matricula(
     FOREIGN KEY (id_alumno)   REFERENCES alumno(id_alumno),
 	FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad),
     FOREIGN KEY (id_generacion) REFERENCES generacion(id_generacion)
-    
 );
 
 -- MATERIA
@@ -103,7 +101,6 @@ create table materia(
     id_especialidad int,
     FOREIGN KEY (id_profesor) REFERENCES profesor(id_profesor),
 	FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad)
-
 );
 
 -- NOTA
@@ -190,5 +187,4 @@ CREATE table detalle(
 );
 
 
-
-
+SELECT * FROM usuario

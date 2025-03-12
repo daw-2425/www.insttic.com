@@ -1,12 +1,11 @@
 <?php
+
 session_start();
-if (!isset($_SESSION["id"])) {
+if (!isset($_SESSION["id_alumno"])) {
   header("Location: ../index.php");
   exit(); // Importante agregar exit después de redirección
-} elseif ($_SESSION["rol"] != 'Alumno') {
-  header("Location: ../index.php");
-  exit(); // También necesario aquí
-}
+} 
+
 
 
 ?>
@@ -20,6 +19,7 @@ if (!isset($_SESSION["id"])) {
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
 <body>
     
@@ -45,7 +45,7 @@ if (!isset($_SESSION["id"])) {
         </div>
 
         <div class="main-header conteiner  p-2 d-flex">
-            <!-- <header class="header">
+            <!--<header class="header">
                 <a class="btn logo">
                     <img src="./img/logoi.png" alt="">
                 </a>
@@ -149,7 +149,8 @@ if (!isset($_SESSION["id"])) {
 
 
           <!--Mis Tablas-->
-          <table class="table container mt-4">
+         <div class="container">
+         <table class="table container mt-4">
             <thead class="encabezado_tabla">
                 <tr>
                     <!-- <th>Foto</th>
@@ -166,6 +167,7 @@ if (!isset($_SESSION["id"])) {
              <!-- COntenido de las tablas -->
             </tbody>
           </table>
+         </div>
           <!-- fin mis tablas -->
 
           <!-- mis tarjetas responsivas -->
