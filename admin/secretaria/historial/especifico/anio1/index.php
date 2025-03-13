@@ -196,7 +196,7 @@
 
                         <th>MATERIAS</th>
                         <th>NOTA</th>
-                        <th colspan="1" class="text-center"><label class="">APTO</label>/<label class="">NO APTO</label></th>
+                        <th class="text-center"><span>APTO</span> / <span>NO APTO</span></th>
                         <th class="text-center" >ESTADO DE LA MATERIA</th>
                        
                         

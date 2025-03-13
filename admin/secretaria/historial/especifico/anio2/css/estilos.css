@@ -43,8 +43,6 @@
   height: 40vh;
 }
 #tablap table thead {
-  font-size: small;
- 
   position: sticky;
   top: 0;
 }

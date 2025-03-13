@@ -91,12 +91,21 @@
                     <article class="col-3" id="anio">
 
                         <select name="" id="select" class="form-select mx-4 mb-2">
-                            <option value="2024/2025">AÑO ACADEMICO: 2024/2025</option>
-                            <option value="2023/2024">AÑO ACADEMICO: 2023/2024</option>
-                            <option value="2022/2023">AÑO ACADEMICO: 2022/2023</option>
-                            <option value="2021/2022">AÑO ACADEMICO: 2021/2022</option>
-                            <option value="2020/2021">AÑO ACADEMICO: 2020/2021</option>
-                            <option value="TODOS LOS AÑOS ACADEMICOS">TODOS LOS AÑOS ACADEMICOS</option>
+                            
+                           <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/www.insttic.com/Admin/conexion/conexion.php";
+                           
+                            $sql = "SELECT a.foto,a.nombre AS Alumno ,a.apellidos,a.contacto_emergencia,es.denominacion, g.nombre,g.año_inicio,g.año_fin,a.DIP, a.edad FROM matricula ma inner join alumno a on ma.id_alumno = a.id_alumno INNER join generacion g on ma.id_generacion = g.id_generacion INNER join especialidad es on ma.id_especialidad = es.id_especialidad";
+                            $resultado = $conexion->prepare($sql);
+                            $resultado->execute();
+
+                            while ($valor = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                               
+                           
+                           ?> 
+                            <option value="<?php echo $valor['nombre']?>"><?php echo $valor['nombre']?></option>
+                           
+                            <?php  } ?>
+                            <option value="todos">AÑO ACADEMICO: 2024/2025</option>
                         </select>
                     </article>
 
