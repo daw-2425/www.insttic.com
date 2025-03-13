@@ -86,6 +86,10 @@ formulario.addEventListener("submit",function (e) {
                 }, 5000);
             }
             else{
+               let respueta= objRequest.response;
+               console.log(respueta);
+               
+               if (respueta == 1) {
                 Swal.fire({
                     title:"Se ha registrado al empleado " +objFormData.get('nom'),
                     icon:"success",
@@ -96,6 +100,8 @@ formulario.addEventListener("submit",function (e) {
                 setInterval(function () {
                     location.reload();
                 }, 3000);
+               }
+                
                 // 
                 }
             }  

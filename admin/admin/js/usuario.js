@@ -6,6 +6,7 @@ function mostrarUsuarios(){
 
     objRequest.open("GET","../php/mostrar/mostrarUsuario.php", true);
     objRequest.addEventListener("load", ()=> {
+        console.log(objRequest.response);
         let respuesta = JSON.parse(objRequest.responseText);
         console.log(respuesta);
         
@@ -13,13 +14,14 @@ function mostrarUsuarios(){
         let tablUsario = document.getElementById("tablUsario");
         tablUsario.innerHTML='';
 
+        
+
         respuesta.forEach(user => {
             tablUsario.innerHTML +=`
 
             <tr>
-                <td> ${user.nombre} </td>
-                <td> ${user.passwd}  </td>
-                <td> ${user.id_alumno} </td>
+                <td> ${user.correo} </td>
+                <td> ${user.rol} </td>
             </tr>
             `;
         });

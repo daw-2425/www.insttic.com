@@ -8,7 +8,7 @@ use insttic;
 
 -- ROL
 create table rol(
-    id_rol int PRIMARY KEY AUTO_INCREMENT,
+    id_rol int PRIMARY KEY,
     rol VARCHAR(45) NOT NULL
 );
 
@@ -19,7 +19,7 @@ create table empleado(
     nombre varchar(45) NOT NULL,
     apellido varchar(45) NOT NULL,
     telefono VARCHAR(45) NOT NULL,
-    correo VARCHAR(45) NOT NULL,
+    correo VARCHAR(45) NOT NULL UNIQUE,
     genero VARCHAR(45) NOT NULL,
     id_rol INT(45) NOT NULL,
     FOREIGN KEY (id_rol) REFERENCES rol(id_rol)
@@ -67,6 +67,7 @@ create table alumno(
     foto VARCHAR(45) NOT NULL,
     nombre VARCHAR(45)NOT NULL,
     apellidos VARCHAR(45) NOT NULL,
+    correo VARCHAR(100) NOT NULL UNIQUE,
     codigo VARCHAR(45) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
     contacto_emergencia VARCHAR(45) NOT NULL,
@@ -141,8 +142,7 @@ create table permiso(
 	FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno)
 );
 
-select * from permiso;
-INSERT into permiso values('','todo',now(),now(),1,'pendiente','nada');
+
 -- SALIDAS
 
 CREATE Table salidas(
@@ -160,7 +160,7 @@ CREATE Table salidas(
 
 create table usuario(
 	cod_usuario int primary key auto_increment,
-    nombre varchar(45) not null,
+    correo varchar(45) not null UNIQUE,
     passwd varchar(100) not null,
     id_alumno int default null, foreign key(id_alumno) references alumno(id_alumno),
     id_empleado int default null, foreign key(id_empleado) references empleado(id_empleado)
@@ -168,7 +168,7 @@ create table usuario(
 
 -- CATEGORIA
 CREATE table categoria_noticia(
-    id_categoria INT PRIMARY KEY AUTO_INCREMENT, 
+    id_categoria INT PRIMARY KEY, 
     tipo_categoria VARCHAR(200) NOT NULL
 );
 
@@ -190,19 +190,17 @@ CREATE table detalle(
     id_noticia INT DEFAULT NULL, FOREIGN KEY(id_noticia) REFERENCES categoria_noticia(id_categoria)
 );
 
+SELECT * FROM alumno;
+
+INSERT INTO especialidad ( denominacion, descripcion) VALUES 
+('TSDAW', 'Tecnico Superior en Desarrollo de Aplicaciones Web'),
+('TSSTI', 'Tecnico Superior en Sistemas de Telecomucion e Informaticos '),
+('TSASIR', 'Tecnico Superior en Administracion de Sistemas Informaticos en Red'),
+('TMSMIR', 'Tecnico Medio en Sistemas Micro-Informaticos Y Redes');
+
+INSERT INTO generacion ( )
+
 <<<<<<< HEAD
-INSERT INTO rol (rol) VALUES 
-('Administrador'),
-('Profesor'),
-('Alumno');
-
-INSERT INTO empleado (foto, nombre, apellido, telefono, correo, genero, id_rol) VALUES
-('empleado1.jpg', 'Juan', 'Pérez', '555123456', 'juan.perez@instituto.com', 'Masculino', 1),
-('empleado2.jpg', 'María', 'López', '555987654', 'maria.lopez@instituto.com', 'Femenino', 2);
-
-INSERT INTO profesor (id_empleado) VALUES
-(2);  
-
 INSERT INTO especialidad (denominacion, descripcion) VALUES 
 ('TSDAW', 'Desarrollo de Aplicaciones Web'),
 ('TSTELECO', ' telecomunicaciones'),
@@ -248,3 +246,6 @@ INSERT INTO noticias (imagen, titulo, descripcion, fecha_suceso, id_categoria) V
 >>>>>>> 68903fa4f7ca9fa5410e420a91eb923d2a6f92b0
 
 SELECT * FROM rol
+=======
+INSERT int
+>>>>>>> 20f97b0ede1c09ff8aca7afae05be94c077ba9c5

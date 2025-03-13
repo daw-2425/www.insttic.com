@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}	
+
+:root{
+    --primary: #0A2A66;
+    --secondary: #ffffff;
+    --success: #00ff00;
+    --info: #0000ff;
+    --danger: #cc1318;
+    --light: #0a5b04;
+    --dark: #000;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    
+}
+/*Aside*/
+.aside{
+    background-color: var(--primary);
+    width: 22%;
+    height: 100vh;
+    transition: all 0.4s ease-in-out;
+}
+.aside .header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px;
+    transition: all 200ms ease-in-out;
+
+    
+
+}
+
+.encabezado{
+    height: 75px;
+    background-color: var(--primary);
+    align-items: center;
+}
+
+.encabezado .logo{
+    width: 50px;
+    height: 50px;
+    
+    img{
+        width: 70px;
+    }
+}
+.sidebar{
+    background-color: var(--primary);
+}
+
+/* logo */
+.aside .header img{
+    width:80px;
+    transition: all 0.4s ease-in-out;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 60px;
+    height: 60px;
+    transition: all 0.4s ease-in-out;
+}
+.logo:hover{
+    background-color: var(--secondary);
+}
+.aside .header .mover{
+    border: none;
+    height: 35px;
+    width:35px;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out ;
+}
+.aside .header .mover:hover{
+    background-color: #ffffffc6;
+}
+
+/* nav */
+
+
+.nav{
+    
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+
+.nav li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    transition: all 0.4s ease-in-out ;
+
+
+}.aside .nav a span{
+ transition: all 200ms ease-in-out;
+}
+
+.nav a{
+    width: 100%;
+    justify-content: center;
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 10px  15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+    font-size: 20px;
+    
+}
+.nav a:hover{
+    background-color: #ffffff1d;
+    border-left: 4px solid var(--secondary);
+}
+
+/* aside mini */
+
+.aside.cerrar .header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside.cerrar{
+    width: 85px;
+}
+
+.aside.cerrar .btnmover{
+    transform: rotate(180deg);
+}
+
+.aside.cerrar .nav a span{
+    display: none;
+}
+
+.aside.cerrar .nav a{
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    transition: all 200ms ease-in-out;
+}
+.aside.cerrar .nav a:hover{
+    background-color: var(--secondary);
+    border: none;
+    color: var(--primary);
+    
+}
+
+/* main */
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(192, 192, 192);
+    transition: all 0.4s ease-in-out;
+}
+
+
+.main-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buscardor{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 10px;
+    color: var(--primary);
+    border-radius: 10px;
+    justify-content: space-around;
+    background-color: #ffffff65;
+    .lupa{
+        display: flex;
+        width: 92%;
+        align-items: center;
+        gap: 10px;
+        height: 40px;
+        padding-left: 10px;
+        color: var(--primary);
+        border-radius: 10px;
+    
+    }
+    input{
+        width: 90%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: var(--primary);
+    }
+    input::placeholder{
+        color: var(--primary);
+    }
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 40px;
+    padding-left: 10px;
+    color: var(--primary);
+    justify-content: center;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #ffffff65;
+    .imagen{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.5rem;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        
+        }
+    }
+
+    .main .header img{
+        width:80px;
+        transition: all 0.4s ease-in-out;
+    }
+    .main .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   /*MAIN*/
+ main{
+    width: 100%;
+    padding: 36px 24px;
+    font-family: var(--poppins);
+}
+ main .head-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-gap:16px;
+    flex-wrap: wrap;
+}
+ .head-title .left h1{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--darkk);
+}
+
+
+ main .head-title .btn-dowload{
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 36px;
+    background: var(--blue);
+    color: var(--lightt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap:10px;
+    font-weight: 500;
+}
+
+ 
+
+ 
+
+/* ESTILOS DE LAS TABLAS*/
+.table thead th{
+    background-color: #053363;
+    color: #dee2e6;
+}
+
+td{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark);
+    text-align: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--grey);
+}
+td img{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+
+table th{
+    background-color: var(--primary);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: center;
+    padding: 16px 0;
+    
+}
+ main .table-dat{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap:24px ;
+    margin-top: 24px;
+    width: 100%;
+    height: 100%;
+}
+ main .table-dat > div{
+    border-radius: 20px;
+    background: var(--lightt);
+    padding: 24px;
+}
+ main .table-dat .orde{
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+ main .table-dat .head{
+    display: flex;
+    align-items: center;
+    grid-gap:16px;
+    margin-bottom: 24px;
+    color: var(--dark);
+    margin-bottom: 24px;
+    min-width: 420px;
+}
+ main .table-dat .head a{
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 600;
+    
+}
+
+ main .table-dat .head .fa-solid {
+    cursor: pointer;
+}
+
+ main .table-dat table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+ main .table-dat table th{
+    padding-bottom:12px ;
+    font-size: 13px;
+    text-align: center;
+    border-bottom:1px solid var(--grey) ;
+    
+}
+
+
+ main .table-dat table td{
+    padding: 16px 0;
+
+}
+
+ main .table-dat table tr td:first-child{
+    display: flex;
+    align-items: center;
+    grid-gap:12px;
+}
+
+ main .table-dat table tbody  tr:hover{
+    background: var(--grey);
+    padding: 20px ;
+}
+
+ .table-dat table  td img{
+margin-left: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+ 
+
+ 
+
+.scrol-tbod {
+    width: 100%;
+    height: 200px;
+    overflow: scroll; 
+}
+table thead th{
+    top: 0;
+    position: sticky;
+}
+
+/*ESTILOS PARA MOBILES*/
+
+.card-respon{
+    width: 100%;
+    
+    padding: 10px;
+    background-color: #f0eded;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.card-respon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.id-acciones{
+    background-color: rgb(209, 205, 205);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.id-acciones a{
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+} 
+
+/*ESTILOS PARA MOBILES*/
+
+
+
+/* ESTILOS DE LAS TABLAS*/
+
+/*MAIN*/
+.card-respon{
+    display: none;
+}
+
+   
+/* MEDIA QUERIES */
+@media (min-width: 268px) and (max-width: 768px){
+    
+    .card-respon{
+        display: block;
+    }
+    .orde{
+        display: none;
+    }
+}
+

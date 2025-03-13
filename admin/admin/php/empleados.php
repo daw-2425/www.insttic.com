@@ -1,5 +1,3 @@
-
-
 <?php
        require_once $_SERVER['DOCUMENT_ROOT'] . "/www.insttic.com/admin/conexion/conexion.php";
 ?>

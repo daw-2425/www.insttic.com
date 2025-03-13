@@ -144,19 +144,18 @@ formulRol.addEventListener("submit",function (e) {
                 setInterval (function(){
                     errorRol.style.display="none";
                 }, 4000);
-            }
-            
-            else{
+            }else{
+                formulRol.reset();
+                ModalRol.hide();
+                mostrarRol();
+                
                 Swal.fire({
                     title:"Se ha registrado el rol de " +objFormData.get('rol'),
                     icon:"success",
                     draggable: true
                 });
-                ModalRol.reset();
-                ModalRol.hide();
-                setInterval(function () {
-                    location.reload();
-                }, 3000);
+                
+              
                 // 
                 }
             }  
