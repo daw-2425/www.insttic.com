@@ -189,7 +189,8 @@ CREATE table detalle(
     id_noticia INT DEFAULT NULL, FOREIGN KEY(id_noticia) REFERENCES categoria_noticia(id_categoria)
 );
 
-SELECT * FROM alumno;
+SELECT * FROM generacion;
+
 
 INSERT INTO especialidad ( denominacion, descripcion) VALUES 
 ('TSDAW', 'Tecnico Superior en Desarrollo de Aplicaciones Web'),
