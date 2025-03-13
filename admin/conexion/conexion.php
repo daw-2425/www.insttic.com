@@ -1,7 +1,7 @@
 <?php 
 $servidor = "localhost";
 $usuario = "root";
-$passwd = "608347rAm";
+$passwd = "";
 $BaseDatos = "insttic";
 
 $dsn = "mysql:host=$servidor;dbname=$BaseDatos";
