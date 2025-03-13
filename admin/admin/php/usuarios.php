@@ -68,7 +68,6 @@
                         <thead>
                             
                             <th>USUARIO</th>
-                            <th>PASSWORD</th>
                             <th>ROL</th>
                         </thead>
                         <tbody id="tablUsario">
