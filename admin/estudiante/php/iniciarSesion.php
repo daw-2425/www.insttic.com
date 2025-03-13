@@ -1,13 +1,13 @@
 <?php
 require("../../conexion/conexion.php");
 
-$nombre = $_POST['nombre'];
+$correo = $_POST['correo'];
 
 $passwd = $_POST['password'];
 
-$stmt = $conexion->prepare('SELECT * FROM usuario WHERE nombre = :email AND passwd = :passwd');
+$stmt = $conexion->prepare('SELECT * FROM usuario WHERE correo = :email AND passwd = :passwd');
 
-$stmt->bindParam(':email', $nombre);
+$stmt->bindParam(':email', $correo);
 
 $stmt->bindParam(':passwd', $passwd);
 

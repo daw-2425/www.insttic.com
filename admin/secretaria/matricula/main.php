@@ -84,7 +84,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Iniciamos una transacción
             $conexion->beginTransaction();
 
-            $email = $_POST['correo'];
+            $correo = $_POST['correo'];
+            $nombre = $_POST['nombre'];
             // Insertamos el alumno
             $sqlAlumno = "INSERT INTO alumno (foto, nombre, apellidos, correo, fecha_nacimiento, contacto_emergencia, genero, id_rol) 
                           VALUES (:foto, :nombre, :apellidos, :correo, :fecha_nacimiento, :contacto_emergencia, :genero, :id_rol)";
@@ -178,14 +179,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ';
 
                 if (mail($para, $asunto, $cuerpo, $encabezado)) {
-                    echo 1;
+                    // echo 1;
                 } else {
-                    echo 2;
+                    // echo 2;
                 }
             }
 
 
-        
+
 
             // Confirmamos la transacción
             $conexion->commit();
@@ -701,7 +702,7 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 'filtrarPorGeneracion') {
 
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" required value="<?php echo !empty($alumno_data) ? $alumno_data['apellidos'] : ''; ?>">
+                                        <input type="email" class="form-control" id="email" name="correo" required value="<?php echo !empty($alumno_data) ? $alumno_data['apellidos'] : ''; ?>">
                                     </div>
 
                                     <div class="mb-3">

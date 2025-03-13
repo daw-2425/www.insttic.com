@@ -1,0 +1,28 @@
+[
+    {
+        "nombre":"Fermín",
+        "apellidos":"Copoború Loeri",
+        "foto":"./img/perfil.jpg"
+    },
+    {
+        "nombre":"Prisco Cayetano ",
+        "apellidos":"Edjang Esimi",
+        "foto":"./img/perfil.jpg"
+    },
+    {
+        "nombre":"Rigoberto",
+        "apellidos":"Pestana Portales",
+        "foto":"./img/perfil.jpg"
+    },
+    {
+        "nombre":"Leuterio",
+        "apellidos":"Sañaba Meñe",
+        "foto":"./img/perfil.jpg"
+    },
+    {
+        "nombre":"Urbano Tomás",
+        "apellidos":"Nguema Owono",
+        "foto":"./img/perfil.jpg"
+    }
+   
+]

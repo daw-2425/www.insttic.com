@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+  
+</head>
+<body>
+
+    <div class="container mt-5">
+        <button type="button" class="btn btn-secondary bajar" data-bs-toggle="modal"
+            data-bs-target="#studentModal">
+            Agregar Estudiante
+        </button>
+    </div>
+
+    <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="studentModalLabel">Formulario de Estudiante</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="studentForm">
+                        <div class="mb-3">
+                            <label for="Image" class="form-label">Imagen</label>
+                            <input type="file" class="form-control" id="Image" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="Nombre"
+                                placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="Apellido"
+                                placeholder="Ingrese su Apellido" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Date" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="Date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Especialidad</label>
+                            <select class="form-select" id="status">
+                              <option value="activo">Daw</option>
+                              <option value="inactivo">Teleco</option>
+                              <option value="pendiente">Asir</option>
+                              <option value="pendiente">Micro</option>
+                            </select>
+                          </div>
+                        <div class="mb-3">
+                            <label for="dirrecion" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="dirrecion"
+                                placeholder="Ingrese su dirección" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contacto" class="form-label"> Contacto /Padre o Tutor</label>
+                            <input type="text" class="form-control" id="contacto"
+                                placeholder="Ingrese contacto" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" form="studentForm" class="btn btn-danger todo">Cerrar</button>
+                    <button type="submit" form="studentForm" class="btn btn-primary todo">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script src="./js/all.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+</html>

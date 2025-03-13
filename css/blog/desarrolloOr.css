@@ -1,0 +1,161 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  padding-top: 100px;
+}
+/*contenedor general1*/
+#container{
+    width: 60%;
+    height: 50vh;
+    /*background-color: forestgreen;*/
+}
+/*contenedor general para la foto y el texto y la noticia*/
+#caja_foto_texto{
+    width: 100%;
+    height: 30vh;
+    display:flex;
+
+    /* background-color: bisque;*/
+}
+/*caja para la foto*/
+#foto{
+    width: 35%;
+    height: 30vh;
+    background-color: red;
+}
+#foto_img{
+    width: 100%;
+    height: 30vh;
+}
+/*caja general para el titulo y la descripcion de la noticia*/
+#caja_titulo_descripcion{
+    width: 65%;
+    height: 30vh;
+
+   /* background-color: rebeccapurple;*/
+}
+/*caja para el titulo*/
+#titulo{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    margin-top: 20px;
+    
+
+    /*background-color: lightcoral;*/
+}
+#tit{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+/*caja para la descripcion*/
+#descripcion{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+   
+    margin-left: 20px;
+
+   /* background-color: fuchsia;*/
+}
+/*caja para mas descripcion*/
+#mas_descripcion{
+    width: 100%;
+    height: 20vh;
+
+    /*background-color: cadetblue;*/
+}
+
+/*MEDIA QUERIE: TELEFONO*/
+@media (min-width:320px) and (max-width:767px){
+
+    /*contenedor general1*/
+#container{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    /*background-color: forestgreen;*/
+}
+/*contenedor general para la foto y el texto y la */
+#caja_foto_texto{
+    width: 100%;
+    height: 30vh;
+    display:block;
+    background-color: white;    
+
+   /* background-color: bisque;*/
+}
+/*caja para la foto*/
+#foto{
+    width: 70%;
+    height: 30vh;
+    background-color: red;
+    margin-left: 60px;
+}
+#foto_img{
+    width: 100%;
+    height: 30vh;
+   /* margin-top: 19rem; arrimo la img hacia abajo y quede en medio del titulo y texto*/
+
+
+}
+/*caja general para el titulo y la descripcion de la noticia*/
+#caja_titulo_descripcion{
+    width: 100%;
+    height: 60vh;
+    background-color: white;
+
+   /* background-color: rebeccapurple;*/
+}
+/*caja para el titulo*/
+#titulo{
+    width: auto;
+    height: 10vh; 
+    padding: 20px;
+    background-color: white;
+    
+  /*display: flex; 
+   padding-bottom: 50rem; texto hacia arriba*/
+    
+   /* background-color: lightcoral;*/
+}
+#tit{
+    margin-left: 10px;
+    margin-top: 0px;
+}
+    
+    
+/*caja para la descripcion*/
+#descripcion{
+    margin-top: 0rem;
+    width: auto;
+    height: 30vh;
+    padding: 10px;
+    background-color: white;
+    /*background-color: fuchsia;*/
+}
+
+#mas_descripcion{
+    width: auto;
+    height: auto;
+    margin-top: 22rem;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+   /* background-color: cadetblue;*/
+}
+
+}
+/*MEDIA QUERIE: IPAD*/
+@media (min-width:768px) and (max-width:1024px) {
+    /*contenedor general1*/
+#container{
+    width: 100%;
+    height: 50vh;
+    padding: 10px;
+    /*background-color: forestgreen;*/
+}
+}

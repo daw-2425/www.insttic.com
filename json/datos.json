@@ -1,0 +1,21 @@
+{
+    "slides": [
+        {
+            "image": "./img/ft/ins.png",
+            "alt": "Slide 1",
+            "titulo": "INSTTIC",
+            "descripcion": "Instituto Superior de Telecomunicaciones Tecnologías de información y Comunicaión"
+        },
+        {
+            "image": "./img/ft/tecno3.jpg",
+            "alt": "Slide 1",
+            "descripcion": "Clausura de la ceremonia de la formacion HCIA DATACOM para profesores del INSTTIC"
+        },
+        {
+            "image": "./img/exenario.jpg",
+            "alt": "Slide 3",
+            "titulo": "EL INSTTIC GANA EL CONCURSO TECNOLOGICO BOSCO",
+            "descripcion": "Los alumnos del INSTTIC son proclamados campeones del concurso tras haber sido los unicos que cumplieron el reto del hackathon "
+        }     
+    ]
+}

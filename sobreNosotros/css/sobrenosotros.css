@@ -1,0 +1,89 @@
+.banner {
+    /* position: relative; */
+    /* background: linear-gradient(rgba(49, 52, 55, 0.036), rgba(45, 57, 68, 0.096)),url('../img/sobrenosotros/ins.png') ; Cambia esto por tu imagen */
+    /* background-size: cover; */
+    height: 60vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding-top: 60px;
+    text-align: center;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.359), rgba(0, 0, 0, 0.315)),url('../../img/sobrenosotros/ins.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+/* una transicion durante dos segundos para el texto del banner */
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+
+
+/* Todos los titulos */
+.titul{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #0A2A66;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;  font-family: Cambria;
+}
+p, h5{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.image-container {
+    position: relative;
+    width: 600px; /* Ancho de la imagen */
+    height: 400px; /* Alto de la imagen */
+    overflow: hidden;
+    animation: blink 8s infinite; /* Animación de parpadeo */
+    background-image: url('./ft/ins.png'); /* Cambia la URL por tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+.sobre-nosotros {
+    
+    color: #0A2A66;
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.sobre-nosotros h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: Cambria;
+}
+.icono {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #0A2A66; /* Color del ícono */
+}
+.card {
+    
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #508af6b8;
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    
+}

@@ -1,0 +1,68 @@
+
+
+
+:root{
+    --color1: #0A2A66;
+    --color2: #CC1318;
+    --color3: #015B04;
+    --color45: rgb(255, 119, 0);
+    --color5: #28322849;
+    --color23: #001830;
+}
+
+
+
+/* CONTACTANOS */
+
+
+    /* banner */
+    .banner{
+        height: 200px;
+        background-image: linear-gradient(rgba(7, 28, 52, 0.688),rgba(33, 33, 34, 0.588)), url(../img/ins.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        p{
+            font-family: cambria;
+            font-weight: 700;
+            color: white;
+            font-size: 55px;
+            
+        }
+    }
+    /* Formulario y contactos */
+    .formYcont{
+       flex-wrap: wrap;
+        border-radius: 15px;
+        font-family: cambria;
+        justify-content: space-between;
+        .formul{
+            /* background-color: #0a0505; */
+            /* box-shadow: 1px 2px 2px black; */
+            width: 900px;
+            form{
+                textarea{
+                    height: 150px;
+                    resize: none;
+                }
+            }
+        }
+        .contactos{
+            background-color: var(--color23);
+            border-radius: 15px;
+            color: white;
+            width: 330px;
+            .contacto{
+                .cadaCont{
+                    border-radius: 15px;
+                    background-color: #3730309c;
+                }
+            }
+            .redes{
+                justify-content: space-around;
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }

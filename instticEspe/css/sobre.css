@@ -1,0 +1,48 @@
+@import url(./colores.css);
+
+.enlace{
+    margin-right: 20px;
+}
+
+.icono{
+    font-size: 15px;
+    color:var(--color5)
+}
+
+.header{
+    background-color: var(--color1);
+
+    .logo{
+        color: var(--color5);
+    }
+}
+
+.text-ico{
+    font-size: 24px;
+}
+
+.text{
+    color: var(--color1)
+}
+
+.banner-sobre{
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.279)),url(../img/2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.txt{
+    font-size: 60px;
+    color: var(--color5);
+}
+
+.txt-sub{
+    font-size: 15px;
+    color: var(--color5);
+}

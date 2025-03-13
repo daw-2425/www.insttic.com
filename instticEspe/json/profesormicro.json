@@ -1,0 +1,28 @@
+[
+    {
+        "nombre":"Silverio Angue",
+        "apellidos":"Ndong Oyana",
+        "foto":"./img/perfil.jpg"
+    },
+    {
+        "nombre":"Prisco Cayetano ",
+        "apellidos":"Edjang Esimi",
+        "foto":"./img/perfil.jpg"
+    },
+    {
+        "nombre":"Rigoberto",
+        "apellidos":"Pestana Portales",
+        "foto":"./img/perfil.jpg"
+    },
+    {
+        "nombre":"Inocencio",
+        "apellidos":"Biribé Ripeu",
+        "foto":"./img/perfil.jpg"
+    },
+    {
+        "nombre":"Urbano Tomás",
+        "apellidos":"Nguema Owono",
+        "foto":"./img/perfil.jpg"
+    }
+   
+]

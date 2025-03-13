@@ -1,0 +1,81 @@
+
+.banner {
+    position: relative;
+    background: linear-gradient(rgba(51, 78, 102, 0.6), rgba(45, 57, 68, 0.6)),url('./ins.png') ; /* Cambia esto por tu imagen */
+    background-size: cover;
+    height: 79vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.animated-text {
+    position: absolute;
+    left: -200px; /* Comienza fuera de la vista a la izquierda */
+    font-size: 2em;
+    color: #0A2A66;
+    opacity: 1;
+    animation: slideToCenter 2s forwards; /* Animación */
+}
+
+@keyframes slideToCenter {
+    0% {
+        left: -300px; /* Comienza fuera de la vista */
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        left: 50%; /* Se mueve al medio */
+        opacity: 1; /* Visible */
+        transform: translateX(-50%); /* Centra horizontalmente */
+    }
+}
+.image-container {
+    position: relative;
+    width: 600px; /* Ancho de la imagen */
+    height: 400px; /* Alto de la imagen */
+    overflow: hidden;
+    animation: blink 8s infinite; /* Animación de parpadeo */
+    background-image: url('./ft/ins.png'); /* Cambia la URL por tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+.sobre-nosotros {
+    
+    color: #0A2A66;
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.sobre-nosotros h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.icono {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #0A2A66; /* Color del ícono */
+}
+.card {
+    
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #508af6;
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}

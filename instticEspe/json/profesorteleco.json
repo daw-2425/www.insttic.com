@@ -1,0 +1,33 @@
+[
+    {
+        "nombre":"Leuterio",
+        "apellidos":"Sañaba Meñe",
+        "foto":"./img/perfil2.jpg"
+    },
+    {
+        "nombre":"Mario José ",
+        "apellidos":"Roberto Fernandez",
+        "foto":"./img/perfil2.jpg"
+    },
+    {
+        "nombre":"Rigoberto",
+        "apellidos":"Pestana Portales",
+        "foto":"./img/perfil2.jpg"
+    },
+    {
+        "nombre":"Julio",
+        "apellidos":"Zaragoza Sanchez",
+        "foto":"./img/perfil2.jpg"
+    },
+    {
+        "nombre":"Inocencio",
+        "apellidos":"Biribe Ripeu",
+        "foto":"./img/perfil2.jpg"
+    },
+    {
+        "nombre":"Prisco Cayetano",
+        "apellidos":"Edjang Esimi",
+        "foto":"./img/perfil2.jpg"
+    }
+   
+]

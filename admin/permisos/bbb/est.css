@@ -1,0 +1,169 @@
+.badge-warning {
+    background-color:rgb(255, 153, 0); 
+}
+.badge-success {
+    background-color: #28a745; 
+}
+.badge-danger {
+    background-color: #dc3545; 
+}
+.badge-info {
+    background-color: #17a2b8; 
+}
+    
+
+.estado-regresado {
+    color: green;
+}
+.estado-cancelado {
+    color: red; 
+}
+.foto-alumno {
+    width: 50px; 
+    height: auto; 
+    border-radius: 50%; 
+}
+.container{
+    text-align: center;
+    h2{
+        color: #0A2A66 ;
+       font-style: initial;
+        padding: 1%;
+    }
+    thead tr th{
+        background-color: #0A2A66;
+        color: beige;
+        
+    }
+
+   table{
+    max-height: 100px;
+overflow: auto;
+
+    }
+
+}
+/* Contenedor de la tabla con scroll */
+.table-container {
+    max-height: 400px; /* Altura máxima del tbody */
+    overflow-y: auto; /* Scroll vertical */
+    border: 1px solid #ddd; /* Borde opcional */
+}
+
+/* Fijar el thead */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa; /* Color de fondo del thead */
+    z-index: 1; /* Asegura que el thead esté por encima del tbody */
+}
+
+/* Estilos adicionales para la tabla */
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para la insignia "Tarde" */
+.badge-tarde {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.badge-tarde {
+    background-color: #ff0000; /* Rojo */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    animation-name: bil;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition: 1s;
+}
+@keyframes bil{
+
+10%{
+    background-color: #ff0000;
+    transform: scale(1.5);
+    color: #ffffff;
+
+}
+20%{
+    background-color: #ff0000;
+    transform: scale(1.5);
+
+}
+30%{
+    
+   
+    background-color:#ff7676;
+    transform: scale(1.5);
+color: #ffffff;
+
+}
+50%{
+    
+
+    background-color:#ff7676;
+    transform: scale(1.5);
+color: #ffffff;
+
+}
+
+50%{
+    
+
+    background-color: #ff0000;
+    transform: scale(1.5);
+color: #ffffff;
+
+}
+
+
+
+}
+
+.texto-con-imagen {
+    font-size: 2rem; 
+    font-weight: bold; 
+    background-image: url('./img/perfil/perfil.jpg'); 
+   
+   font-family: Arial, Helvetica, sans-serif;
+    background-clip: text; 
+    background-position: center;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    color: transparent; 
+}
+.textocon-imagen {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    background-image: url('./img/perfil/perfil.jpg'); 
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+    background-clip: text; 
+    background-position: center;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    color: transparent; 
+}
+
+form .form-control{
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+.bajar{
+    background-color: #0A2A66;
+    color: #ffffff;
+}
+

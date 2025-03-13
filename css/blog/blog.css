@@ -1,0 +1,425 @@
+/*slider*/
+
+.slider-container { 
+    position: relative; 
+    min-width: 100%; 
+    overflow: hidden;   
+}
+.slider {   
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+    min-width: 100%;
+    
+    height: 80vh;
+}
+.slide { 
+    min-width: 100%; 
+    position: relative;
+    text-align: center;
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    background-color: #0056b3;
+}
+.slide img { 
+    min-width: 100%;
+    height: 100vh; /* Se adapta al contenedor */
+     /* Tamaño máximo */
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;  
+    gap: 2rem; 
+}
+.overlay h2 { 
+    font-size: 2rem; 
+    /*background: linear-gradient(to top, #fff, #0A2A66);*/    
+}    
+.overlay p { 
+    font-size: 1.3em; 
+    max-width: 90%; 
+} 
+#btn_leerMas{
+    background-color: #CC1318;
+    color: white;
+}
+/*Btn slider: anterior siguiente*/
+.buttons { 
+    position: absolute; 
+    top: 40%; width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 10rem;
+    background-color: none;
+}
+.buttons button {
+    border: none;
+    padding-right: 10px;
+    cursor: pointer; 
+    font-size: 3rem;
+    background: none;
+    color: #fff;
+}
+.buttons button:hover { 
+    color: #fff;
+    opacity: 0.4;
+}
+/*TEXTO grande del blog*/
+#titulo_BLOG{
+    background-color: #0A2A66;
+    padding: 10px;
+    height: auto; 
+    transform: skew(-10deg);
+    margin: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+#titulo_BLOG > span{
+    color: #fff;
+    font-size: 4rem;
+}
+#titulo_BLOG > h1{
+    color: #fff;
+    margin-left: 2rem;font-size: 4rem;
+}
+#texto_blog_aside{
+    width: 100%;
+    height: auto;
+    margin-top: 30px; 
+}
+.texto_noticias{
+    width:60%;
+    height: auto;
+    padding-left: 5rem;
+}
+.texto_aside{
+    width: 35%;
+    height: auto;
+    padding-left: 20rem;
+}
+/*Desarrollo de la noticia*/
+#container_blog_aside{
+    width: 100%;
+    height: 70vh;
+    background-color: #fff;
+    margin-bottom: 30px;
+    justify-content: center;
+    margin-top: 10px;   
+}
+/*caja noticias*/
+#caja_noticias{
+    width:60%;
+    height: 100vh;
+    background-color:#fff;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: none;
+    overflow: scroll;
+    padding-bottom: 20px;
+}
+#caja_noticias::-webkit-scrollbar{
+width: 10px;
+}
+#caja_noticias::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 50px;
+    border-right: 2px solid #0A2A66;
+    
+}
+#caja_noticias::-webkit-scrollbar-thumb{
+    background-color: #0A2A66;
+    border-radius: 50px;
+    
+}
+.TarjetaGeneral{  
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-color:#0A2A66;
+    margin: 60px 30px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    transition: 1s ease-in-out;
+    cursor: pointer;    
+}
+.las{
+    font-size: 3rem;
+    color: #0A2A66;
+    margin-left: 35rem;  
+}
+.TarjetaGeneral:hover{
+    height: auto; 
+    .las{
+display: none;
+    }
+}
+.TarjetaGeneral .cimagen{
+    position: relative;
+    max-width:95%;
+    height: 40vh;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 3px 50px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin-top: 2rem;/*3 rem o sin m-t*/
+}
+.TarjetaGeneral a{
+    color: white;
+}
+.TarjetaGeneral .cimagen img{
+    width: 100%; 
+    height: 100%;
+    border-radius: 6px;
+} 
+.TarjetaGeneral .ctexto{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1.5s ease-in-out;  
+}
+.TarjetaGeneral:hover .ctexto{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -50px;
+}
+/*caja aside*/
+.caja_aside_general{
+    width:40%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#caja_aside{
+    width:100%;
+    height: 100vh;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-top: 45px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: none;
+    overflow: scroll;
+    padding-bottom: 20px;
+}      
+#caja_aside::-webkit-scrollbar{
+width: 10px;
+}
+#caja_aside::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 50px;
+    border-right: 2px solid #0A2A66;
+    
+}
+#caja_aside::-webkit-scrollbar-thumb{
+    background-color: #0A2A66;
+    border-radius: 50px;
+}
+#texto_noticias_ultimas{
+    margin-left: 5rem;
+}
+/*Input*/
+.input-grupo {
+    display: flex;
+    width: 80%;
+    /*max-width: 400px;*/
+    margin: 0 auto;
+}
+.formulario-control {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+.bttn {
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-left: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+}
+.bttn:hover {
+    background-color: #0056b3;
+}
+/*Categorias*/
+.categorias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.categoria1{
+    width: auto;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+}
+.categoria2{
+    width: auto;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+}
+.categoria3{
+    width: auto;
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+}
+.cat_tecnológica{
+    color:gray;
+    border: 2px solid  Gray;
+    margin: 20px;
+}
+.cat_deporte{
+    color:gray;
+    border: 2px solid  Gray;
+    margin: 20px;
+}
+.cat_cultural{
+    color:gray;
+    border: 2px solid  Gray;
+    margin: 20px;
+}
+
+#card{
+    width:400px;
+    height: auto;
+    border: none;
+    margin-left: 50px;
+    
+    
+}
+#caja_imagen{
+    background-color: #fff;
+    margin-top: 20px;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: none;
+}
+#caja_imagen img{
+    height: 8rem;
+    border-radius: none;
+
+}
+#footer{
+    margin-top:30rem ;    
+}
+/*ESTILO RESPONSIVO*/
+@media (max-width: 768px) {
+
+    .overlay {
+        padding-top: 12rem; 
+        gap: 0.5rem; 
+    }
+    .overlay h2 { 
+        font-size: 0.7rem;   
+    }    
+    .overlay p { 
+        font-size: 0.7em; 
+    } 
+    .buttons button {
+        font-size: 2rem;
+    }
+    #btn_leerMas{
+        font-size: 0.7rem;
+    }
+    /*TEXTO grande del blog*/
+    #titulo_BLOG > h1{
+        margin-left: 4rem;font-size: 2rem;
+    }
+    /*Contenedor noticias y aside*/
+    #container_blog_aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    #caja_noticias{
+        width:100%;
+        height: 100vh;
+    }
+    .TarjetaGeneral{ 
+        margin-top: 0px;
+        margin-bottom: 60px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px 0px;    
+    }
+    .ctexto{
+        font-size: 1rem;
+    }
+    .caja_aside_general{
+        width:100%;
+        justify-content: center;
+    }
+    #caja_aside{
+        height: auto;
+        overflow: hidden;
+        margin-top: 0px;
+    }      
+    /*Input*/
+    .input-grupo {
+    width: 100%;
+    }
+    /*Categorias*/
+#card{
+    width:100%;                      
+    margin-left: 0px;   
+}
+#caja_imagen{
+    margin-top: 0px;
+    height: 8rem;
+    width: 100%;
+}
+#caja_imagen img{
+    width: 20vh;
+    height: 8rem;
+}
+#footer{
+    margin-top:5rem ;    
+}
+
+}
