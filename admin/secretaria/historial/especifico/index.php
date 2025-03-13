@@ -1,4 +1,12 @@
 
+<?php 
+
+require_once $_SERVER['DOCUMENT_ROOT'] . "/www.insttic.com/Admin/conexion/conexion.php";
+
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -166,7 +174,7 @@
 
 
     <section class="d-flex flex-column justify-content-center align-content-center" id="estu">
-        <h5 class="text-center text-dark">ESTUDIANTE: TARSICIO SANTANDER MORGADES</h5>
+        <h5 class="text-center text-dark text-uppercase" id="estudiante"></h5>
     </section>
 
     <section class="d-flex justify-content-end me-5">
@@ -200,17 +208,16 @@
                     </li>
     </section>
 
-    <section class="d-flex container col-11 align-items-center" id="tabla-sect">
+    <section class="d-flex container col-11 align-items-center justify-content-center" id="tabla-sect">
         <div class="table-responsive d-flex col-12" id="tablap">
 
             <table class="table table-bordered" id="tabla">
                 <thead class="">
-                    <tr id="">
+                    <tr id="tr_bajaa">
 
                         <th>MATERIAS</th>
                         <th>NOTA</th>
-                        <th colspan="" class="text-center"><label class="text-white">APTO</label>/<label
-                                class="text-white">NO APTO</label></th>
+                        <th class="text-center"><span>APTO</span> / <span>NO APTO</span></th>
                         <th class="text-center" >ESTADO DE LA MATERIA</th>
                      
 

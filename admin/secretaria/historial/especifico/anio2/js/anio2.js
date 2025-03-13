@@ -44,10 +44,10 @@ window.onload = (e) => {
                                     </td>
                                     
                                     <td  class="text-center" id="apto">
-                                    <label for="" class="text-success col-7 fst-italic"> ${materias.apto}</label>
+                                    <label for="" class="text-success col-12 fst-italic"> ${materias.apto}</label>
                                     </td>
                                     <td  class="text-center" id="apto">
-                                    <label for="" class="text-success col-7 fst-italic"> ${materias.estado}</label></td>
+                                    <label for="" class="text-success col-12 fst-italic"> ${materias.estado}</label></td>
                                     
                                     
                                   
@@ -95,10 +95,10 @@ window.onload = (e) => {
                                     </td>
                                     
                                     <td  class="text-center" id="apto">
-                                    <label for="" class="text-danger col-7 fst-italic"> ${materias.apto}</label></td>
+                                    <label for="" class="text-danger col-12 fst-italic"> ${materias.apto}</label></td>
                                     </td>
                                    <td  class="text-center" id="apto">
-                                    <label for="" class="text-danger col-7 fst-italic"> ${materias.estado}</label></td>
+                                    <label for="" class="text-danger col-12 fst-italic"> ${materias.estado}</label></td>
                                    
                                   
                                 </tr>

@@ -1,4 +1,5 @@
--- Active: 1738527463871@@127.0.0.1@3306@insttic
+-- Active: 1729109094940@@127.0.0.1@3306@insttic
+
 drop database insttic;
 
 
@@ -246,4 +247,4 @@ INSERT INTO noticias (imagen, titulo, descripcion, fecha_suceso, id_categoria) V
 =======
 >>>>>>> 68903fa4f7ca9fa5410e420a91eb923d2a6f92b0
 
-SELECT * FROM usuario
+SELECT * FROM rol

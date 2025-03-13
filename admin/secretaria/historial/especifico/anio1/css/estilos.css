@@ -44,7 +44,6 @@
 }#tablap table thead{
   position: sticky;
   top: 0;
-  font-size: small;
   
 }#tablap table tbody tr td{
  font-size: medium;
@@ -67,7 +66,7 @@
 #tablap table thead tr th{
   background-color: var(--primary);
   position: sticky;
-  color: rgb(255, 255, 255);
+  color: white;
   top: 0;
   font-size: small;
 }#estu{

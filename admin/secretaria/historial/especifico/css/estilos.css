@@ -42,26 +42,27 @@
   height: 40vh;
 }
 #tablap table thead {
-  
   position: sticky;
   top: 0;
-  font-size: small;
-  
 }
 #tablap table tbody tr td {
   font-size: medium;
+  
 }
 #tablap table thead tr th {
   background-color: var(--primary);
   position: sticky;
-  color: white;
+ /* color: #ffffff; */
 
-  font-size: small;
+
   top: 0;
 
+}#tr_bajaa th{
+  color: #ffffff;
+  font-size:small;
+ 
 }
 #estu {
-  background-color: #00ff00;
   margin-top: 15px;
   height: 40px;
 }

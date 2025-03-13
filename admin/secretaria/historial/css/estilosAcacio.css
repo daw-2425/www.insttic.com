@@ -19,8 +19,7 @@
 #tabla table thead{
   position: sticky;
   top: 0;
-  height: 20px;
-  font-size: small;
+ 
 }#tabla table thead th{
   background-color: var(--primary);
   color: white;

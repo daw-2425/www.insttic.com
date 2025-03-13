@@ -28,7 +28,7 @@ window.onload = (e) => {
   function sele() {
     let xhr = new XMLHttpRequest();
 
-    xhr.open("GET", "./anios.json");
+    xhr.open("GET", "./anios.php");
 
     xhr.addEventListener("readystatechange", (e) => {
       if (xhr.readyState == 4) {
@@ -36,118 +36,119 @@ window.onload = (e) => {
           let json = JSON.parse(xhr.responseText);
           let cart = d.getElementById("cart");
           let body = d.getElementById("bodyM");
+          let h5 = d.getElementById("estudiante");
           json.forEach((element) => {
-            element.anio1.forEach((materias) => {
-              if (
-                materias.nota >= 5 &&
-                materias.apto === "apto" &&
-                materias.estado === "Vista"
-              ) {
-               
+           h5.innerHTML = "ESTUDIANTE: "+element.nombre +" "+ element.apellidos;
+            
+              if (element.media > 5) {
+                console.log(element.media)
                 body.innerHTML += `
                 <tr>
                                     <td>
-                                    ${materias.nombre}
+                                    ${element.materia}
                                     </td>
                                     <td class="text-center">
                                     
-                                    <label class="text-success fw-bold">${materias.nota}</label>
+                                    <label class="text-success fw-bold">${Math.round(element.media)}</label>
                                     </td>
                                     
                                     <td  class="text-center" id="apto">
-                                    <label for="" class="text-success col-7 fst-italic"> ${materias.apto}</label>
+                                    <label for="" class="text-success col-12 fst-italic">apto </label>
                                     </td>
                                     <td  class="text-center" id="apto">
-                                    <label for="" class="text-success col-7 fst-italic"> ${materias.estado}</label></td>
+                                    <label for="" class="text-success col-12 fst-italic">Vista</label></td>
                                     
                                     
 
                                 </tr>
                 `;
 
-                cart.innerHTML += `
-                <ul class="list-group list-group-flush mt-3">
-                                              <li class="list-group-item">Materia:  ${materias.nombre}</li>
-                                              <li class="list-group-item">Nota: ${materias.nota}</li>
-                                              <li class="list-group-item">
-                                                  <label class="text-success">APTO</label>/<label class="text-danger">NO
-                                                      APTO: ${materias.apto}</label>
-                                              </li>
-                                              <li class="list-group-item">ESTADO ACADÉMICO: ${materias.estado}</li>
+      //           cart.innerHTML += `
+      //           <ul class="list-group list-group-flush mt-3">
+      //                                         <li class="list-group-item">Materia:  ${materias.nombre}</li>
+      //                                         <li class="list-group-item">Nota: ${materias.nota}</li>
+      //                                         <li class="list-group-item">
+      //                                             <label class="text-success">APTO</label>/<label class="text-danger">NO
+      //                                                 APTO: ${materias.apto}</label>
+      //                                         </li>
+      //                                         <li class="list-group-item">ESTADO ACADÉMICO: ${materias.estado}</li>
                                             
   
-                                          </ul>
+      //                                     </ul>
   
-                                          <div class="card-body">
+      //                                     <div class="card-body">
   
   
-                                              <select name="" id="sele" class="form-select col-2">
-                                                  <option value="${materias.acade}">
-                                                      ${materias.acade}
-                                                  </option>
-                                                  <option value=" ${materias.actual}">
-                                                      ${materias.actual} 
-                                                  </option>
-                                                  <option value="2024">2024</option>
-                                              </select>
+      //                                         <select name="" id="sele" class="form-select col-2">
+      //                                             <option value="${materias.acade}">
+      //                                                 ${materias.acade}
+      //                                             </option>
+      //                                             <option value=" ${materias.actual}">
+      //                                                 ${materias.actual} 
+      //                                             </option>
+      //                                             <option value="2024">2024</option>
+      //                                         </select>
                                              
-                                          </div>
-       `;
+      //                                     </div>
+      //  `;
               }
 
-              if (
-                materias.nota < 5 &&
-                materias.apto === "no apto" &&
-                materias.estado === "Pendiente"
-              ) {
-               
-                body.innerHTML += `
-                <tr>
-                                    <td>
-                                    ${materias.nombre}
-                                    </td>
-                                    <td class="text-center">
+              // if (
+              //   element.media < 5
+              // ) 
+              
+              // {
+                // console.log(element.media)
+                // body.innerHTML += `
+                // <tr>
+                //                     <td>
+                //                     ${element.materia}
+                //                     </td>
+                //                     <td class="text-center">
                                     
-                                    <label class="text-danger fw-bold">${materias.nota}</label>
-                                    </td>
+                //                     <label class="text-danger fw-bold">${element.media}</label>
+                //                     </td>
                                     
-                                    <td  class="text-center" id="apto">
-                                    <label for="" class="text-danger col-7 fst-italic"> ${materias.apto}</label></td>
-                                    </td>
-                                   <td  class="text-center" id="apto">
-                                    <label for="" class="text-danger col-7 fst-italic"> ${materias.estado}</label></td>
+                //                     <td  class="text-center" id="apto">
+                //                     <label for="" class="text-danger col-12 fst-italic">No apto</label></td>
+                //                     </td>
+                //                    <td  class="text-center" id="apto">
+                //                     <label for="" class="text-danger col-12 fst-italic"> Vista </label></td>
                             
 
-                                </tr>
-                `;
-                cart.innerHTML += `
-                <ul class="list-group list-group-flush mt-3">
-                                              <li class="list-group-item">Materia:  ${materias.nombre}</li>
-                                              <li class="list-group-item">Nota: ${materias.nota}</li>
-                                              <li class="list-group-item">
-                                                  <label class="text-success">APTO</label>/<label class="text-danger">NO
-                                                      APTO: ${materias.apto}</label>
-                                              </li>
-                                              <li class="list-group-item">ESTADO ACADÉMICO: ${materias.estado}</li>
+                //                 </tr>
+                // `;
+      //           cart.innerHTML += `
+      //           <ul class="list-group list-group-flush mt-3">
+      //                                         <li class="list-group-item">Materia:  ${materias.nombre}</li>
+      //                                         <li class="list-group-item">Nota: ${materias.nota}</li>
+      //                                         <li class="list-group-item">
+      //                                             <label class="text-success">APTO</label>/<label class="text-danger">NO
+      //                                                 APTO: ${materias.apto}</label>
+      //                                         </li>
+      //                                         <li class="list-group-item">ESTADO ACADÉMICO: ${materias.estado}</li>
                                            
-                                          </ul>
+      //                                     </ul>
   
-                                          <div class="card-body">
+      //                                     <div class="card-body">
   
   
-                                              <select name="" id="sele" class="form-select col-2">
-                                                  <option value="${materias.acade}">
-                                                      ${materias.acade}
-                                                  </option>
-                                                  <option value=" ${materias.actual}">
-                                                      ${materias.actual}
-                                                  </option>
-                                                  <option value="2024">2024</option>
-                                              </select>
+      //                                         <select name="" id="sele" class="form-select col-2">
+      //                                             <option value="${materias.acade}">
+      //                                                 ${materias.acade}
+      //                                             </option>
+      //                                             <option value=" ${materias.actual}">
+      //                                                 ${materias.actual}
+      //                                             </option>
+      //                                             <option value="2024">2024</option>
+      //                                         </select>
                                             
-                                          </div>
-       `;
-              }
+      //                                     </div>
+      //  `;
+              // }
+
+
+
 
               // const chart1 = echarts.init(document.getElementById("porc"));
               // chart1.setOption(
@@ -175,7 +176,7 @@ window.onload = (e) => {
               //     ],
               //   })
               // );
-            });
+           
           });
 
           
@@ -187,6 +188,6 @@ window.onload = (e) => {
   }
 
   sele();
-  mostrarDatos(e);
+  // mostrarDatos(e);
 
 };
