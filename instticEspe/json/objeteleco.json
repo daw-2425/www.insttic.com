@@ -1,0 +1,26 @@
+[
+    {
+        "objetivo":"Ajustar la configuración lógica analizando las necesidades y criterios establecidos para configurar y explotar sistemas informáticos."
+    },
+    {
+        "objetivo":"Identificar las necesidades de seguridad verificando el plan preestablecido para aplicar técnicas y procedimientos relacionados."
+    },
+    {
+        "objetivo":"Instalar módulos analizando su estructura y funcionalidad para gestionar servidores de aplicaciones."
+    },
+    {
+        "objetivo":"Ajustar parámetros analizando la configuración para gestionar servidores de aplicaciones."
+    },
+    {
+        "objetivo":"Interpretar el diseño lógico, verificando los parámetros establecidos para gestionar bases de datos."
+    },
+    {
+        "objetivo":"Seleccionar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos."
+    },
+    {
+        "objetivo":"Utilizar lenguajes, objetos y herramientas, interpretando las especificaciones para desarrollar aplicaciones web con acceso a bases de datos."
+    },
+    {
+        "objetivo":"Generar componentes de acceso a datos, cumpliendo las especificaciones, para integrar contenidos en la lógica de una aplicación web."
+    }
+]

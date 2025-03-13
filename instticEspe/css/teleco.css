@@ -1,0 +1,347 @@
+/* @import url(./colores.css); */
+
+.text-ico{
+    font-size: 24px;
+}
+
+.text{
+    color: var(--color1)
+}
+
+.banner{
+    height: 330px;
+    background: linear-gradient(to top,rgba(7, 90, 10, 0.788),rgba(12, 31, 15, 0.623)),url(../img/fondotele.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .text-bannerteleco{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .texto{
+        font-size: 80px;
+        font-weight: bold;
+        color: var(--color5);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.484);
+    }
+    
+    .text-ciclot{
+        font-size: 30px;
+        color: var(--color5);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.484);
+    }
+
+    .horas{
+        color: var(--color5);
+        font-size: 23px;
+    }
+}
+
+.optiontele{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    &:hover{
+        color: var(--color3);
+    }
+    
+}
+
+.tele{
+    font-weight: bold;
+}
+
+.text-teleco{
+        width: 70%;
+        height: auto;
+        background-color: var(--color8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.443);
+
+    p{
+        color: var(--color5);
+        font-size: 20px;
+        text-align: justify;
+    }
+}
+
+.imagen{
+    width: 240px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.modulo{
+    font-weight: 600;
+    color: var(--color3);
+
+}
+
+.nav_interteleco{
+    margin-top: 20px;
+}
+
+.nav_interteleco button{
+    border: none;
+    width: 300px;
+    background-color: var(--color5);
+    font-size: 18px;
+    font-weight: 700;
+    &:hover{
+        color: var(--color3);
+    }
+}
+
+#tele li{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.modul-text{
+    background-color: var(--color6);
+    border-radius: 10px;
+}
+
+.otras-esp{
+    display: flex;
+    flex-wrap: wrap;
+
+    .esp-daw{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color7);
+        width: 320px;
+        height: 250px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.938);
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .esp-daw a{
+        text-decoration: none;
+        color: var(--color5);
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .esp-daw p{
+        color: var(--color5);
+    }
+
+    .font{
+        font-size: 30px;
+        color: var(--color5);
+        margin-top: 10px;
+    }
+
+    .btn-esp{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color6);
+        margin-right: 15px;
+        border-radius: 50%;
+    }
+}
+
+.esp-teleco{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color3);
+    width: 320px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.938);
+    margin: 10px;
+    padding: 10px;
+}
+
+.esp-teleco a{
+    text-decoration: none;
+    color: var(--color5);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.esp-teleco p{
+    color: var(--color5);
+}
+
+.esp-asir{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color9);
+    width: 320px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.938);
+    margin: 10px;
+    padding: 10px;
+}
+
+.esp-asir a{
+    text-decoration: none;
+    color: var(--color5);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.esp-asir p{
+    color: var(--color5);
+}
+
+.esp-micro{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color2);
+    width: 320px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.938);
+    margin: 10px;
+    padding: 10px;
+}
+
+.esp-micro a{
+    text-decoration: none;
+    color: var(--color5);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.esp-micro p{
+    color: var(--color5);
+}
+
+@media  screen and (width < 700) {
+    
+    .text-salida p{
+        text-align: justify;
+    }
+    
+    .nav_interteleco button{
+        border: none;
+        width: 300px;
+        background-color: var(--color5);
+        font-size: 18px;
+        font-weight: 700;
+        &:hover{
+            color: var(--color3);
+        }
+    }
+    
+}
+
+@media screen and (width < 900px){
+    .text-teleco{
+        width: 100%;
+    }
+    .tele{
+        font-size: 18px;
+        font-size: 400;
+        margin-bottom: 10px;
+    }
+
+    .optiontele{
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    .modulo-txt{
+        text-align: justify;
+    }
+
+    .text-daw{
+       width: 95%;
+       height: 250px;
+       padding: 20px;
+    }
+
+    .text-daw p{
+        text-align: justify;
+        font-size: 16px;
+    }
+
+    .texto{
+        font-size: 10px;
+    }
+
+    .horas{
+        font-size: 20px;
+    }
+    
+    .nav_interteleco button{
+        border: none;
+        width: 300px;
+        background-color: var(--color5);
+        font-size: 18px;
+        font-weight: 700;
+        &:hover{
+            color: var(--color3);
+        }
+    }
+    
+}
+
+@media screen and (width < 400px){
+    .enlace{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .optiontele{
+        font-size: 17px;
+        width: 80%;
+    }
+
+    .bannerDaw{
+        height: 300px;
+    }
+
+    .text-bannerteleco{
+        .texto{
+            font-size: 40px;
+        }
+        .text-ciclot{
+            font-size: 25px;
+        }
+    }
+
+    
+    .nav_interteleco button{
+        border: none;
+        width: 300px;
+        background-color: var(--color5);
+        font-size: 18px;
+        font-weight: 700;
+        &:hover{
+            color: var(--color3);
+        }
+    }
+    
+}

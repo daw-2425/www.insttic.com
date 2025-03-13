@@ -1,0 +1,44 @@
+.faq{
+    max-width: 100%;
+    margin-top: 30px;
+    /* padding-bottom: 5px; */
+    border-bottom: 2px solid #3e3e3e;
+    cursor: pointer;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h4{
+    font-size: 18px;
+    color: #6e6a6a;
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+}
+
+
+.answer p{
+    padding-top: 1rem;
+    line-height: 1.4;
+    font-size: 17px;
+}
+
+.faq.active .answer{
+    max-height: 300px;
+    animation: fade 0.4s ease-in;
+}
+
+.faq.active .icono{
+    transform: rotate(180deg);
+}
+
+.icono{
+    transition: transform 0.5s ease-in;
+}

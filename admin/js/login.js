@@ -5,7 +5,7 @@ formLogin.addEventListener("submit", function(e) {
     let datos = new FormData(formLogin);
     var xhr = new XMLHttpRequest();
     
-    xhr.open("POST", "./estudiante/php/iniciarSesion.php", true);
+    xhr.open("POST", "./php/iniciarSesion.php", true);
     
     
    xhr.addEventListener('load', ()=>{
@@ -24,3 +24,4 @@ formLogin.addEventListener("submit", function(e) {
     
     xhr.send(datos);
 });
+

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="./css/all.min.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/estilos.css">
+<link rel="stylesheet" href="./css/fontawesome.min.css">
+<link rel="stylesheet" href="./css/colores.css">
+<link rel="stylesheet" href="./css/salidas.css">
+<link rel="stylesheet" href="./css/teleco.css">
+<link rel="stylesheet" href="./css/profesoresDaw.css">
+<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/acordeon.css">
+<link rel="stylesheet" href="./css/asir.css">
+<link rel="stylesheet" href="./css/micro.css">

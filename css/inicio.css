@@ -1,0 +1,625 @@
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3rem; /* Ajusta el tamaño de la fuente según tus preferencias */
+    font-weight: bold;
+    color: #333; /* Cambia el color a tu gusto */
+    animation: fadeInUp 2s ease-in-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /*  */
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    overflow: hidden;
+    /* Resto de estilos para la animación de escritura */
+    animation: typing 3s steps(40, end) infinite;
+    white-space: nowrap; /* Evita que las palabras se rompan */
+    border-right: 2px solid; /* Crea un cursor parpadeante */
+  }
+  
+  .carousel-item img {
+    height: 200px; /* Ajusta la altura de la imagen */
+    height: 80vh;
+    object-fit: cover;
+    object-position: center top;  
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    bottom: 0;
+  }
+  /* aqui empiezo */
+  
+  div{
+    h3{
+      font-family: cambria;
+      font-weight: 700;
+      color: #0A2A66;
+     
+    }
+    h4{
+      font-family: cambira;
+    }
+  }
+
+  
+
+.unom{
+width: 60%;
+height: 100%;
+/* background-color: #2ecc71; */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+
+}
+.pp{
+  margin-top:10px ;
+}
+.ad {
+  margin-top: 20px;
+}
+#admin{
+  background-color: #DE4E15;
+}
+#teleco{
+  background-color:#015b04;
+}
+#micro{
+  background-color: #cc1318;
+}
+.dos{
+  width: 40%;
+  height: 100%;
+  /* background-color: #333; */
+}
+.primero{
+  width: 300px;
+  height: 250px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 0px 50px 0px 50px;
+  background-color: #4A709C;
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.cod{
+  font-size: 30px;
+  color: white;
+  margin-top: 10px;
+}
+.primero a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+.dos{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.primero P{
+  color: white;
+
+}
+#cont{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+#cont h3{
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 55px;
+  align-items: center;
+ 
+}
+.cuatro{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 35px;
+  align-items: center;
+}
+
+.tres{
+  width: 100%;
+  height: 70px;
+  background-color: #333;
+
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 35px;
+  align-items: center;
+
+}
+.enlace{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.especialidades{
+  margin-top: 40px;
+}
+.reto{
+  border:2px solid #2ecc71;
+  height: 700px;
+  }
+      .sponsor-row {
+          display: flex; 
+          justify-content: space-around;
+          flex-wrap: wrap; 
+          padding: 20px; 
+      }
+      #es{
+          width: 300px;
+          height: 60px;
+  
+   
+      }
+  
+      .sponsor-box {
+          text-align: center;
+          padding: 5px; 
+          /* border: 1px solid #ddd;  */
+          border-radius: 8px;
+          margin: 14px; 
+          /* background-color: #f9f9f9;  */
+           
+          flex: 1 1 150px; 
+          max-width: 200px; 
+      }
+      .sponsor-box p{
+      font-size: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      }
+  
+  
+      .sponsor-box img {
+          width: 100%; 
+          height: auto; 
+          border-radius: 15px; 
+      }
+      /* estilos de la etiqueta a */
+      a {
+          color: #007bff;
+          text-decoration: none;
+      }
+      /* estilos para el header */
+      header {
+          background-color: #343a40;
+          color: white;
+          padding: 20px;
+      }
+      header h1 {
+          font-size: 2rem;
+          margin-bottom: 0;
+          font-family: 'Times New Roman', Times, serif;
+      }
+      /* estilos para el footer */
+     
+      h2{
+          font-family: 'Times New Roman', Times, serif;
+      }
+/*  */
+#contenedor {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .especialidades{
+    margin-top: 0px;
+  }
+  .unom, .dos {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+}
+  
+    /*  */
+    #slider {
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .carousel-inner .carousel-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+  
+  .carousel-caption {
+      z-index: 2;
+  }
+  
+  @media (max-width: 768px) {
+      .carousel-inner .carousel-item img {
+          height: 300px;
+      }
+  
+      .carousel-caption h5 {
+          font-size: 1.2rem;
+      }
+  
+      .carousel-caption p {
+          font-size: 0.9rem;
+      }
+  }
+
+  /*  */
+  #specialtyCarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+#specialtyCarousel .carousel-inner .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#specialtyCarousel .carousel-caption {
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item {
+      height: 300px;
+  }
+
+  .carousel-inner .carousel-item img {
+      height: 300px;
+  }
+
+}
+#slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ndhndn */
+.dos {
+  display: flex; /* Usamos Flexbox para alinear los elementos */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 20px; /* Espacio entre la imagen y el texto */
+  max-width: 1000px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 20px; /* Espacio interno */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+ 
+}
+
+.imagen {
+  flex: 1; /* La imagen ocupa 1 parte del espacio disponible */
+  min-width: 250px; /* Ancho mínimo de la imagen */
+}
+
+.imagen img {
+  width: 100%; /* La imagen ocupa el 100% del contenedor .imagen */
+  height: 400px; /* Mantiene la proporción de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+
+.texto h3 {
+  margin-top: 0; /* Elimina el margen superior por defecto */
+  font-size: 24px; /* Tamaño del título */
+}
+
+.texto p {
+  font-size: 16px; /* Tamaño del texto */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .dos {
+    flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+    text-align: center; /* Centra el texto */
+  }
+
+  .imagen, .texto {
+    min-width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+  }
+}
+
+/* Estilos base para el slider */
+.container .container {
+  height: 450px; /* Altura inicial del slider */
+}
+
+.carousel-item {
+  height: 510px; /* Altura inicial de los elementos del carrusel */
+}
+.carousel-item img {
+  width: 100%;
+  
+  
+}
+
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container .container {
+    height: 300px; /* Reduce la altura del slider en dispositivos pequeños */
+  }
+  /* quiero que aunque estemos en dispositivos pequeños, que se muestren todos los elementos del slider el titulo la descripcion y la imagen */
+
+
+  .carousel-item {
+    height: 300px; /* Reduce la altura de los elementos del carrusel */
+  }
+
+  .carousel-item img {
+    height: 300px; /* Reduce la altura de las imágenes */
+  }
+
+}
+
+/* Estilos para pantallas muy pequeñas (ej. móviles) */
+@media (max-width: 480px) {
+  .container .container {
+    height: 250px; /* Reduce aún más la altura del slider */
+  }
+
+  .carousel-item {
+    height: 250px; /* Reduce aún más la altura de los elementos del carrusel */
+  }
+
+  .carousel-item img {
+    height: 250px; /* Reduce aún más la altura de las imágenes */
+  }
+
+}
+/* estilos del slider */
+/* css/sles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.moro {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  /* padding: 20px; */
+}
+
+.carousel {
+  border-radius: 1px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgb(154, 4, 4);
+}
+
+.carousel-inner {
+  /* border-radius: 1px; */
+  img{
+    height: 100%;
+  }
+
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 500px; /* Ajusta la altura según tus necesidades */
+  object-fit: cover;
+}
+/* el segundo slider  quiero que este slider muestre todos los elemntos*/
+
+#slider-container {
+  max-width: 800px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+/* asta aqui */
+.carousel-caption h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #ddd;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Botones de control */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+/* 
+/* Media Queries para dispositivos móviles */
+
+@media (max-width: 768px) {
+  .carousel-item img {
+      height: 300px; 
+  }
+
+  .carousel-caption {
+      padding: 10px;
+  }
+
+  .carousel-caption h3 {
+      font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+      font-size: 0.9rem; 
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+      width: 30px; 
+      height: 30px;
+  }
+} 
+/* segundo slider aqui estan los nuevo estios *
+
+/* Estilos personalizados para el slider */
+.carousel {
+
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Efecto de zoom al pasar el mouse */
+.carousel-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Efecto de gradient sobre las imágenes */
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  transition: opacity 0.5s ease;
+}
+
+/* Estilos para el texto */
+.carousel-caption {
+  bottom: 20%;
+  text-align: left;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-item.active .carousel-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Botones de navegación personalizados */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+/* nuevos esrtilos del contador */
+
