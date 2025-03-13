@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="css/estilosAcacio.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
  
    
 </head>
@@ -19,9 +20,9 @@
 
     
     
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/insttic/Admin/secretaria/components/aside.php" ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/www.insttic.com/Admin/secretaria/components/aside.php" ?>
 
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] ."/insttic/Admin/secretaria/components/asideResponsive.php" ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] ."/www.insttic.com/Admin/secretaria/components/asideResponsive.php" ?>
 
     <div class="main">
         <div class="container-fluid encabezado d-flex d-lg-none ">
@@ -61,6 +62,115 @@
         </div>
 
 
+          <!-- DASHBOARD DE LA SECRETARIA -->
+          <div class="container text-center mt-5 px-3">
+            <div class="row cajaTarjetas text-light">
+                <div class="col-4 py-5 tarjeta">
+
+                    <p class="h4"><i class="fa-solid fa-user-graduate text-warning"></i> Estudiantes</p>
+                    <p>100</p>
+                </div>
+                <div class="col-4 py-5 tarjeta">
+                    <p class="h4"> <i class="fa-solid fa-user-check text-success"></i> Aprobados</p>
+                    <p>70</p>
+                </div>
+                <div class="col-4 py-5 tarjeta">
+                    
+                    <p class="h4"><i class="fa-solid fa-user-xmark text-danger"></i> Reprobados</p>
+                    <p>30</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-12" id="historial">
+
+                <section class="mt-4 d-flex align-items-center justify-content-center" id="sectAnio">
+
+                    <article class="col-3" id="anio">
+
+                        <select name="" id="select" class="form-select mx-4 mb-2">
+                            
+                           <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/www.insttic.com/Admin/conexion/conexion.php";
+                           
+                            $sql = "SELECT a.foto,a.nombre AS Alumno ,a.apellidos,a.contacto_emergencia,es.denominacion, g.nombre,g.año_inicio,g.año_fin,a.DIP, a.edad FROM matricula ma inner join alumno a on ma.id_alumno = a.id_alumno INNER join generacion g on ma.id_generacion = g.id_generacion INNER join especialidad es on ma.id_especialidad = es.id_especialidad";
+                            $resultado = $conexion->prepare($sql);
+                            $resultado->execute();
+
+                            while ($valor = $resultado->fetch(PDO::FETCH_ASSOC)) {
+                               
+                           
+                           ?> 
+                            <option value="<?php echo $valor['nombre']?>"><?php echo $valor['nombre']?></option>
+                           
+                            <?php  } ?>
+                            <option value="todos">AÑO ACADEMICO: 2024/2025</option>
+                        </select>
+                    </article>
+
+                    <article class="col-5 mx-4" id="bus">
+
+                        <input type="search" class="form-control mx-4 mb-2" id="buscar"
+                            placeholder="Buscar estudiante por nombre, Apellido o  Correo...">
+
+                    </article>
+
+
+                </section>
+
+                <section class="">
+                    <article class="">
+                        <h4 class="text-center fw-normal fst-italic" id="histo"></h4>
+                    </article>
+                </section>
+
+                <section class="d-flex justify-content-end me-5">
+                <a href="" > <i class="fa-solid fa-print fs-4 me-5"></i> </a>
+                </section>
+                <section class="d-flex col-11 container align-items-center mb-5" id="tabla-sect">
+                    <div class="table-responsive d-flex flex-column col-12" id="tabla">
+
+                        <table class="table">
+                            <thead class="">
+                                <tr>
+
+                                    <th>PERFIL</th>
+                                    <th>NOMBRE</th>
+                                    <th>APELLIDOS</th>
+                                    <th>CONTACTO</th>
+                                    <th>ESPECIALIDAD</th>
+                                    <th>TUTOR DE LA ESPECIALIDAD</th>
+                                    <th>AÑO ACADEMICO</th>
+                                    <th>DIP</th>
+                                    <th>AÑOS</th>
+                                    <th>FUNCIONES</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="body">
+
+
+                            <div class="card col-12 cart mt-4" id="cart-papa">
+
+                                        
+
+                                       
+
+                                        
+                                       
+                                    </div>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </section>
+
+               
+            </div>
+
+
        
        
 
@@ -68,11 +178,12 @@
 
 </div>
 
-<script src="./js/chart.umd.js"></script>
-<script src="./js/chartjs-plugin-datalabels.js"></script>
-<script src="./js/aside.js"></script>
-<script src="./js/all.js"></script>
-<script src="./js/grafico.js"></script>
+<!-- <script src="../js/chart.umd.js"></script>
+<script src="../js/chartjs-plugin-datalabels.js"></script> -->
+<script src="../js/aside.js"></script>
+<script src="./js/asides.js" ></script>
+<script src="../js/all.js"></script>
+<!-- <script src="../js/grafico.js"></script> -->
 
 
 <script src="../js/bootstrap.bundle.min.js"></script>

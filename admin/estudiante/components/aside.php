@@ -1,4 +1,4 @@
-<?php  define("ruta_base","http://localhost/Insttic.com/Admin/estudiante");?>
+<?php  define("ruta_base","http://localhost/www.insttic.com/admin/estudiante");?>
 
 
 <div class="aside d-none d-lg-block">

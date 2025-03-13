@@ -1,3 +1,5 @@
+-- Active: 1729109094940@@127.0.0.1@3306@insttic
+
 drop database insttic;
 
 
@@ -6,7 +8,7 @@ use insttic;
 
 -- ROL
 create table rol(
-    id_rol int PRIMARY KEY AUTO_INCREMENT,
+    id_rol int PRIMARY KEY,
     rol VARCHAR(45) NOT NULL
 );
 
@@ -17,7 +19,7 @@ create table empleado(
     nombre varchar(45) NOT NULL,
     apellido varchar(45) NOT NULL,
     telefono VARCHAR(45) NOT NULL,
-    correo VARCHAR(45) NOT NULL,
+    correo VARCHAR(45) NOT NULL UNIQUE,
     genero VARCHAR(45) NOT NULL,
     id_rol INT(45) NOT NULL,
     FOREIGN KEY (id_rol) REFERENCES rol(id_rol)
@@ -65,12 +67,13 @@ create table alumno(
     foto VARCHAR(45) NOT NULL,
     nombre VARCHAR(45)NOT NULL,
     apellidos VARCHAR(45) NOT NULL,
+    correo VARCHAR(100) NOT NULL UNIQUE,
+    codigo VARCHAR(45) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
     contacto_emergencia VARCHAR(45) NOT NULL,
     genero VARCHAR(45) NOT NULL,
 	id_rol INT(45) NOT NULL,
     FOREIGN KEY (id_rol) REFERENCES rol(id_rol)
-   
 );
 
 -- MATRICULA
@@ -88,7 +91,6 @@ create table matricula(
     FOREIGN KEY (id_alumno)   REFERENCES alumno(id_alumno),
 	FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad),
     FOREIGN KEY (id_generacion) REFERENCES generacion(id_generacion)
-    
 );
 
 -- MATERIA
@@ -102,7 +104,6 @@ create table materia(
     id_especialidad int,
     FOREIGN KEY (id_profesor) REFERENCES profesor(id_profesor),
 	FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad)
-
 );
 
 -- NOTA
@@ -141,6 +142,7 @@ create table permiso(
 	FOREIGN KEY (id_alumno) REFERENCES alumno(id_alumno)
 );
 
+
 -- SALIDAS
 
 CREATE Table salidas(
@@ -158,7 +160,7 @@ CREATE Table salidas(
 
 create table usuario(
 	cod_usuario int primary key auto_increment,
-    nombre varchar(45) not null,
+    correo varchar(45) not null UNIQUE,
     passwd varchar(100) not null,
     id_alumno int default null, foreign key(id_alumno) references alumno(id_alumno),
     id_empleado int default null, foreign key(id_empleado) references empleado(id_empleado)
@@ -166,7 +168,7 @@ create table usuario(
 
 -- CATEGORIA
 CREATE table categoria_noticia(
-    id_categoria INT PRIMARY KEY AUTO_INCREMENT, 
+    id_categoria INT PRIMARY KEY, 
     tipo_categoria VARCHAR(200) NOT NULL
 );
 
@@ -187,3 +189,64 @@ CREATE table detalle(
     tipo_categoria VARCHAR(200) NOT NULL,
     id_noticia INT DEFAULT NULL, FOREIGN KEY(id_noticia) REFERENCES categoria_noticia(id_categoria)
 );
+
+SELECT * FROM generacion;
+
+
+INSERT INTO especialidad ( denominacion, descripcion) VALUES 
+('TSDAW', 'Tecnico Superior en Desarrollo de Aplicaciones Web'),
+('TSSTI', 'Tecnico Superior en Sistemas de Telecomucion e Informaticos '),
+('TSASIR', 'Tecnico Superior en Administracion de Sistemas Informaticos en Red'),
+('TMSMIR', 'Tecnico Medio en Sistemas Micro-Informaticos Y Redes');
+
+INSERT INTO generacion ( )
+
+<<<<<<< HEAD
+INSERT INTO especialidad (denominacion, descripcion) VALUES 
+('TSDAW', 'Desarrollo de Aplicaciones Web'),
+('TSTELECO', ' telecomunicaciones'),
+('ADMIN', 'administracion'),
+('MICINFO', ' micro infrmatica');
+
+INSERT INTO generacion (nombre, año_inicio, año_fin, id_especialidad, id_sala) VALUES
+('Generación 2021-2023', 2025, 2029, 1, 1),
+('Generación 2023-2024', 2024, 2028, 2, 2);
+
+INSERT INTO alumno (foto, nombre, apellidos,, codigo, fecha_nacimiento, contacto_emergencia, genero, id_rol) VALUES
+('alumno1.jpg', 'Carlos', 'Ramírez','123-BA' '2000-03-01', '555112233', 'Masculino', 3),
+('alumno2.jpg', 'Ana', 'Martínez', '321-AB', '2001-07-12', '555998877', 'Femenino', 3);
+
+INSERT INTO materia (id_materia,nombre, creditos, horas, id_profesor, id_especialidad) VALUES
+('DAWES', 5, 40, 1, 1),
+('BBDD', 4, 36, 2, 2);
+
+INSERT INTO nota (id_alumno, id_materia, nota) VALUES
+(1, 1, 9.5),
+(2, 2, 8.0);
+
+INSERT INTO amonestacion (motivo, descripcion, fecha, id_empleado, id_alumno) VALUES
+('Falta de asistencia', 'El alumno no asistió a 3 clases consecutivas', '2025-03-01', 1, 1),
+('Comportamiento', 'Se detectó comportamiento inapropiado en clase', '2025-03-03', 2, 2);
+
+INSERT INTO permiso (motivo, fecha_entrada, fecha_salida, id_alumno, estado, archivo_adjuntado) VALUES
+('Enfermedad', '2025-03-01', '2025-03-03', 1, 'Pendiente', 'enfermedad.pdf'),
+('Baja temporal', '2025-03-04', '2025-03-10', 2, 'Aceptado', 'baja_temporal.pdf');
+
+INSERT INTO usuario (nombre, passwd, id_alumno, id_empleado) VALUES
+('juanperez', 'password123', 1, NULL),
+('maria_lopez', 'securepassword', NULL, 1);
+
+INSERT INTO categoria_noticia (tipo_categoria) VALUES 
+('Noticias académicas'),
+('Eventos institucionales');
+
+INSERT INTO noticias (imagen, titulo, descripcion, fecha_suceso, id_categoria) VALUES
+('noticia1.jpg', 'Convocatoria de becas', 'Se abre la convocatoria para becas en la especialidad de informática.', '2025-03-01', 1),
+('noticia2.jpg', 'Feria de empleo', 'Feria de empleo y oportunidades de prácticas profesionales.', '2025-03-05', 2);
+=======
+>>>>>>> 68903fa4f7ca9fa5410e420a91eb923d2a6f92b0
+
+SELECT * FROM rol
+=======
+INSERT int
+>>>>>>> 20f97b0ede1c09ff8aca7afae05be94c077ba9c5

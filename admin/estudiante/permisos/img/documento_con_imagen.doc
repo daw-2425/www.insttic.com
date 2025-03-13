@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="cuerpo">
+
+    <div style="text-align: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Coat_of_arms_of_Equatorial_Guinea.svg/640px-Coat_of_arms_of_Equatorial_Guinea.svg.png" width="50" height="50">
+        <p>Republica de Guinea Ecuatorial</p>
+        <p style="font-size: 20px; font-weight: bold;">Ministerio de Seguridad Social</p>
+    </div>
+    </br>
+    </br>
+    </br>
+        <div style="text-align: center;">
+        <img src="http://localhost/crud_ajax_cajas/img/perfil.jpg" width="130" height="150" alt="">
+        <p style="font-size: 18px; font-weight: bold;">CERTIFICACION</p>
+    </div>
+
+    <div style="text-align: justify;">
+        <p>Certificamos que en el sistema de informacion de este Ministrerio Publico <strong>NO EXIXTEN ANTECEDENTES PENALES</strong> a nombre de 
+        <strong>Zabulon Oluy</strong>
+   
+            con numero de D.I.P <strong>P10017550</strong> , por lo que se expide la presente Certificacion.</p>
+                    <p>La presente cestificacion se expide, firma y sella digitalmente a solicitud de la parte interesada, el dia 03 del mes de Marzo del año 2025.</p>
+    </div>
+    </br>
+    </br>
+    </br>
+    <div style="text-align: center;">
+        <p>
+            <strong>Verifica la autenticidad de la presente certeficacion ingresado a www.certificacion.com, seccion servicios, opcion consultas, y digite los siguientes codigos de servicios:</strong>
+        </p>
+    </div>
+    </br>
+    </br>
+    <div style="text-align: center;">
+        <div width="50" height="50" style="background-color: aquamarine;">
+            <p style="font-size: 18px; font-weight: bold;">
+                <span>
+                    <strong>Codigo de Servicio:</strong>
+                </span>
+
+            </p>
+            <p style=" font-size: 20px; font-weight: bold;">054778455</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+

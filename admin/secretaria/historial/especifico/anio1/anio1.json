@@ -1,0 +1,96 @@
+[
+  {
+    "anio1": [
+      {
+        "nombre": "Sistemas Informáticos",
+        "nota": "10",
+        "apto": "apto",
+        "estado": "Vista",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      },
+      {
+        "nombre": "Bases de Datos.",
+        "nota": "2",
+        "apto": "no apto",
+        "estado": "Pendiente",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      },
+      {
+        "nombre": "Programación.",
+        "nota": "9",
+        "apto": "apto",
+        "estado": "Vista",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      },
+      {
+        "nombre": "Lenguajes de Marcas",
+        "nota": "2",
+        "apto": "no apto",
+        "estado": "Pendiente",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      },
+      {
+        "nombre": "Entornos de desarrollo.",
+        "nota": "5",
+        "apto": "apto",
+        "estado": "Vista",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      },
+      {
+        "nombre": "Gestión de Bases de Datos.",
+        "nota": "2",
+        "apto": "no apto",
+        "estado": "Pendiente",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      },
+      {
+        "nombre": "Inglés Técnico",
+        "nota": "2",
+        "apto": "no apto",
+        "estado": "Pendiente",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      },
+      {
+        "nombre": "Desarrollo Web en Entorno Cliente",
+        "nota": "7",
+        "apto": "apto",
+        "estado": "Vista",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      },
+      {
+        "nombre": "Formación y Orientacion Laboral",
+        "nota": "2",
+        "apto": "no apto",
+        "estado": "Pendiente",
+        "asis": "R",
+        "comp": "B",
+        "actual": "2023",
+        "acade": "2023/2024"
+      }
+    ]
+  }
+]

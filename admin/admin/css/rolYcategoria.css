@@ -1,0 +1,18 @@
+
+#errorCat{
+    display: none;
+}
+#errorCodCat{
+    display: none;
+}
+#errorCodRol{
+    display: none;
+}
+#errorRol{
+    display: none;
+}
+
+.tablaYgrafico{
+    justify-content: center;
+    gap: 100px;
+}
