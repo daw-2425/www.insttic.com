@@ -84,11 +84,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tipo']) && $_POST['ti
         <nav class="nav">
 
         <li><a href=""><i class="fa-solid fa-house-user"></i><span> Enlace</span> </a></li>
-                <li><a href="./index.php" class='billy' ><i class="fa-solid fa-door-closed"></i> <span>permisos</span> </a></li>
-                <li><a href="./inde.php" ><i class="fa-solid fa-person-walking-arrow-right"></i> <span> salidas</span> </a></li>
-                <li><a href="#"> </a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li><a href="./index.php" ><i class="fa-solid fa-door-closed"></i> <span>permisos</span> </a></li>
+                <li><a href="./inde.php" class='billy'><i class="fa-solid fa-person-walking-arrow-right"></i> <span> salidas</span> </a></li>
+                <li><a href=""><i class="fa-solid fa-user-graduate"></i> <span> Enlace</span> </a></li>
+                <li><a href=""><i class="fa-solid fa-user-graduate"></i> <span> Enlace</span> </a></li>
+                <li><a href=""><i class="fa-solid fa-user-graduate"></i> <span> Enlace</span> </a></li>
+                <li><a href=""><i class="fa-solid fa-user-graduate"></i> <span> Enlace</span> </a></li>
         </nav>
 
     </div>
@@ -197,7 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tipo']) && $_POST['ti
                     <?php foreach ($salidas as $salida): ?>
                         <?php
                         // Verificar si la hora de regreso es después de las 16:45
-                        $horaRegreso = $salida['FECHAYHORA_SALIDAD'];
+                        $horaRegreso = $salida['fechayhora_salida'];
                         $horaLimite = '16:45:00';
                         $insigniaTarde = '';
                         if ($horaRegreso && date('H:i:s', strtotime($horaRegreso)) > $horaLimite) {
@@ -208,22 +209,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tipo']) && $_POST['ti
                             <td><img src="<?= $salida['foto'] ?>" alt="Foto" class="foto-alumno"></td>
                           
                             <td><?= $salida['nombre'] . ' ' . $salida['apellidos'] ?></td>
-                            <td><?= $salida['NUMERO_CUARTO'] ?></td>
-                            <td><?= $salida['FECHAYHORA_ENTRADA'] ?></td>
+                            <td><?= $salida['numero_cuarto'] ?></td>
+                            <td><?= $salida['fechayhora_entrada'] ?></td>
                             <td>
-                                <?= $salida['FECHAYHORA_SALIDAD'] ? $salida['FECHAYHORA_SALIDAD'] : 'N/A' ?>
+                                <?= $salida['fechayhora_salida'] ? $salida['fechayhora_salida'] : 'N/A' ?>
                                 <?= $insigniaTarde ?>
                             </td>
                             <td>
-                                <?php if ($salida['ESTADO'] === 'regresado'): ?>
+                                <?php if ($salida['estado'] === 'regresado'): ?>
                                     <span class="estado-regresado">Regresado</span>
-                                <?php elseif ($salida['ESTADO'] === 'cancelado'): ?>
+                                <?php elseif ($salida['estado'] === 'cancelado'): ?>
                                     <span class="estado-cancelado">Cancelado</span>
                                 <?php else: ?>
-                                    <span class="badge badge-warning"><?= ucfirst($salida['ESTADO']) ?></span>
+                                    <span class="badge badge-warning"><?= ucfirst($salida['estado']) ?></span>
                                 <?php endif; ?>
                             </td>
-                            <td><?= $salida['DESTINO'] ?></td>
+                            <td><?= $salida['destino'] ?></td>
                             <td>
                                 <form method="POST" action="">
                                     <input type="hidden" name="id_salida" value="<?= $salida['id_salida'] ?>">
